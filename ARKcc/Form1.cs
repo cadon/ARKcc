@@ -120,7 +120,7 @@ namespace ARKcc
                             if (parameters.Count() > 1)
                             {
                                 int n = 1;
-                                this.entities.Add(new Entity() { pos = i, name = parameters[0].Trim(), id = parameters[1].Trim(), bp = (parameters.Count() > 2 ? parameters[2].Trim() : ""), category = String.Join("\\", categories), maxstack = (parameters.Count() > 3 ? (int.TryParse(parameters[3].Trim(), out n) ? n : 1) : 1) });
+                                this.entities.Add(new Entity() { name = parameters[0].Trim(), id = parameters[1].Trim(), bp = (parameters.Count() > 2 ? parameters[2].Trim() : ""), category = String.Join("\\", categories), maxstack = (parameters.Count() > 3 ? (int.TryParse(parameters[3].Trim(), out n) ? n : 1) : 1) });
                                 i++;
                             }
                         }
