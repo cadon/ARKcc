@@ -19,7 +19,7 @@ namespace ARKcc
         private List<int> recentList = new List<int>();
         private List<int> recentKindList = new List<int>();
         private List<Entity> entities = new List<Entity>();
-        private int maxRecently = 30;
+        private int maxRecently = 100;
 
         public Form1()
         {
@@ -29,7 +29,7 @@ namespace ARKcc
         private void Form1_Load(object sender, EventArgs e)
         {
             // read entities from file
-            string path = @"entities.txt";
+            string path = "entities.txt";
 
             // check if file exists
             if (!File.Exists(path))
@@ -108,7 +108,10 @@ namespace ARKcc
                                     }
                                     if (!nodeExists)
                                     {
-                                        nodes.Add(categories[n]);
+                                        // add new node alphabetically
+                                        int nn = 0;
+                                        while (nn < nodes.Count && String.Compare(nodes[nn].Text, categories[n], true) < 0) { nn++; }
+                                        nodes.Insert(nn, categories[n]);
                                         break;
                                     }
                                 }
@@ -120,7 +123,7 @@ namespace ARKcc
                             if (parameters.Count() > 1)
                             {
                                 int n = 1;
-                                this.entities.Add(new Entity() { name = parameters[0].Trim(), id = parameters[1].Trim(), bp = (parameters.Count() > 2 ? parameters[2].Trim() : ""), category = String.Join("\\", categories), maxstack = (parameters.Count() > 3 ? (int.TryParse(parameters[3].Trim(), out n) ? n : 1) : 1) });
+                                this.entities.Add(new Entity() { name = parameters[0].Trim() + (parameters[1].Trim().Length + (parameters.Count() > 2 ? parameters[2].Trim().Length : 0) == 0 ? " (NO ID OR BP GIVEN!)" : ""), id = parameters[1].Trim(), bp = (parameters.Count() > 2 ? parameters[2].Trim() : ""), category = string.Join("\\", categories), maxstack = (parameters.Count() > 3 ? (int.TryParse(parameters[3].Trim(), out n) ? n : 1) : 1) });
                                 i++;
                             }
                         }
@@ -186,7 +189,10 @@ namespace ARKcc
 
         private void buttonCopy_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(textBoxCommand.Text);
+            if (textBoxCommand.Text.Length > 0)
+            {
+                Clipboard.SetText(textBoxCommand.Text);
+            }
         }
 
         private string createCommand(int list, int index)
@@ -194,7 +200,7 @@ namespace ARKcc
             switch (list)
             {
                 case 1:
-                    return this.entities[index].id;
+                    return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + this.entities[index].id;
                     break;
                 case 2:
                     if (this.checkBoxExact.Checked)
@@ -242,25 +248,28 @@ namespace ARKcc
             if (eIndex >= 0)
             {
                 string command = createCommand(list, eIndex);
-                string name = this.entities[eIndex].name;
-                this.textBoxCommand.Text += (this.textBoxCommand.Text.Length > 0 ? "|" : "") + command;
-                int pos = this.listBoxRecent.Items.IndexOf(name);
-                if (pos == -1)
+                if (command.Length > 0)
                 {
-                    this.recentList.Insert(0, eIndex);
-                    this.recentKindList.Insert(0, list);
-                    this.listBoxRecent.Items.Insert(0, name);
-                    updateRecentlyList();
-                }
-                else if (pos > 0)
-                {
-                    this.recentList.RemoveAt(pos);
-                    this.recentKindList.RemoveAt(pos);
-                    this.listBoxRecent.Items.RemoveAt(pos);
-                    this.recentList.Insert(0, eIndex);
-                    this.recentKindList.Insert(0, list);
-                    this.listBoxRecent.Items.Insert(0, name);
-                    updateRecentlyList();
+                    string name = this.entities[eIndex].name;
+                    this.textBoxCommand.Text += (this.textBoxCommand.Text.Length > 0 ? "|" : "") + command;
+                    int pos = this.listBoxRecent.Items.IndexOf(name);
+                    if (pos == -1)
+                    {
+                        this.recentList.Insert(0, eIndex);
+                        this.recentKindList.Insert(0, list);
+                        this.listBoxRecent.Items.Insert(0, name);
+                        updateRecentlyList();
+                    }
+                    else if (pos > 0)
+                    {
+                        this.recentList.RemoveAt(pos);
+                        this.recentKindList.RemoveAt(pos);
+                        this.listBoxRecent.Items.RemoveAt(pos);
+                        this.recentList.Insert(0, eIndex);
+                        this.recentKindList.Insert(0, list);
+                        this.listBoxRecent.Items.Insert(0, name);
+                        updateRecentlyList();
+                    }
                 }
             }
         }
@@ -336,6 +345,21 @@ namespace ARKcc
                 }
             }
         }
-        
+
+        private void listBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            ListBox lb = sender as ListBox;
+            if (lb != null)
+            {
+                if (e.Button == System.Windows.Forms.MouseButtons.Right)
+                {
+                    int index = lb.IndexFromPoint(e.Location);
+                    if (index != System.Windows.Forms.ListBox.NoMatches)
+                    {
+                        System.Diagnostics.Process.Start("http://ark.gamepedia.com/" + lb.Items[index].ToString().Replace(' ', '_'));
+                    }
+                }
+            }
+        }
     }
 }

@@ -231,6 +231,7 @@
             this.listBoxItems.Size = new System.Drawing.Size(343, 480);
             this.listBoxItems.TabIndex = 0;
             this.listBoxItems.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxItems_MouseDoubleClick);
+            this.listBoxItems.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_MouseUp);
             // 
             // tabPageCreatures
             // 
@@ -238,7 +239,7 @@
             this.tabPageCreatures.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreatures.Name = "tabPageCreatures";
             this.tabPageCreatures.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreatures.Size = new System.Drawing.Size(246, 236);
+            this.tabPageCreatures.Size = new System.Drawing.Size(522, 486);
             this.tabPageCreatures.TabIndex = 0;
             this.tabPageCreatures.Text = "Creatures";
             this.tabPageCreatures.UseVisualStyleBackColor = true;
@@ -256,8 +257,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.listBoxCreatures);
-            this.splitContainer2.Size = new System.Drawing.Size(240, 230);
-            this.splitContainer2.SplitterDistance = 80;
+            this.splitContainer2.Size = new System.Drawing.Size(516, 480);
+            this.splitContainer2.SplitterDistance = 172;
             this.splitContainer2.TabIndex = 3;
             // 
             // treeViewCreatures
@@ -265,7 +266,7 @@
             this.treeViewCreatures.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewCreatures.Location = new System.Drawing.Point(0, 0);
             this.treeViewCreatures.Name = "treeViewCreatures";
-            this.treeViewCreatures.Size = new System.Drawing.Size(80, 230);
+            this.treeViewCreatures.Size = new System.Drawing.Size(172, 480);
             this.treeViewCreatures.TabIndex = 1;
             this.treeViewCreatures.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCreatures_AfterSelect);
             // 
@@ -275,9 +276,10 @@
             this.listBoxCreatures.FormattingEnabled = true;
             this.listBoxCreatures.Location = new System.Drawing.Point(0, 0);
             this.listBoxCreatures.Name = "listBoxCreatures";
-            this.listBoxCreatures.Size = new System.Drawing.Size(156, 230);
+            this.listBoxCreatures.Size = new System.Drawing.Size(340, 480);
             this.listBoxCreatures.TabIndex = 0;
             this.listBoxCreatures.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxCreatures_MouseDoubleClick);
+            this.listBoxCreatures.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_MouseUp);
             // 
             // tabPageCommands
             // 
@@ -285,7 +287,7 @@
             this.tabPageCommands.Location = new System.Drawing.Point(4, 22);
             this.tabPageCommands.Name = "tabPageCommands";
             this.tabPageCommands.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCommands.Size = new System.Drawing.Size(246, 236);
+            this.tabPageCommands.Size = new System.Drawing.Size(522, 486);
             this.tabPageCommands.TabIndex = 3;
             this.tabPageCommands.Text = "Commands";
             this.tabPageCommands.UseVisualStyleBackColor = true;
@@ -303,8 +305,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.listBoxCommands);
-            this.splitContainer3.Size = new System.Drawing.Size(240, 230);
-            this.splitContainer3.SplitterDistance = 80;
+            this.splitContainer3.Size = new System.Drawing.Size(516, 480);
+            this.splitContainer3.SplitterDistance = 172;
             this.splitContainer3.TabIndex = 3;
             // 
             // treeViewCommands
@@ -312,7 +314,7 @@
             this.treeViewCommands.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewCommands.Location = new System.Drawing.Point(0, 0);
             this.treeViewCommands.Name = "treeViewCommands";
-            this.treeViewCommands.Size = new System.Drawing.Size(80, 230);
+            this.treeViewCommands.Size = new System.Drawing.Size(172, 480);
             this.treeViewCommands.TabIndex = 1;
             this.treeViewCommands.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCommands_AfterSelect);
             // 
@@ -322,7 +324,7 @@
             this.listBoxCommands.FormattingEnabled = true;
             this.listBoxCommands.Location = new System.Drawing.Point(0, 0);
             this.listBoxCommands.Name = "listBoxCommands";
-            this.listBoxCommands.Size = new System.Drawing.Size(156, 230);
+            this.listBoxCommands.Size = new System.Drawing.Size(340, 480);
             this.listBoxCommands.TabIndex = 0;
             this.listBoxCommands.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxCommands_MouseDoubleClick);
             // 
@@ -346,6 +348,7 @@
             this.listBoxRecent.Size = new System.Drawing.Size(244, 493);
             this.listBoxRecent.TabIndex = 0;
             this.listBoxRecent.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxRecent_MouseDoubleClick);
+            this.listBoxRecent.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_MouseUp);
             // 
             // textBoxCommand
             // 
@@ -372,10 +375,10 @@
             this.labelInfo.AutoSize = true;
             this.labelInfo.Location = new System.Drawing.Point(234, 6);
             this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(507, 13);
+            this.labelInfo.Size = new System.Drawing.Size(655, 13);
             this.labelInfo.TabIndex = 0;
             this.labelInfo.Text = "Doubleclick on entry to add to command list. Copy to clipboard, then Alt-Tab to g" +
-    "ame and paste in console";
+    "ame and paste in console. Right-click to open Wiki-entry.";
             // 
             // groupBoxSettings
             // 
