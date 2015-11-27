@@ -20,6 +20,8 @@ namespace ARKcc
         private List<int> recentKindList = new List<int>();
         private List<Entity> entities = new List<Entity>();
         private int maxRecently = 100;
+        private int currentList = -1;
+        private string currentCats = "";
 
         public Form1()
         {
@@ -141,9 +143,9 @@ namespace ARKcc
                 this.treeViewCommands.ExpandAll();
                 this.treeViewCreatures.ExpandAll();
                 this.treeViewItems.ExpandAll();
-                filterList(1, "Commands");
-                filterList(2, "Creatures");
-                filterList(3, "Items");
+                filterList(2, "Commands");
+                filterList(1, "Creatures");
+                filterList(0, "Items");
             }
         }
 
@@ -152,7 +154,7 @@ namespace ARKcc
             int index = this.listBoxRecent.IndexFromPoint(e.Location);
             if (index != System.Windows.Forms.ListBox.NoMatches)
             {
-                this.addCommand(0, index);
+                this.addCommand(3, index);
             }
         }
 
@@ -161,7 +163,7 @@ namespace ARKcc
             int index = this.listBoxCommands.IndexFromPoint(e.Location);
             if (index != System.Windows.Forms.ListBox.NoMatches)
             {
-                this.addCommand(1, index);
+                this.addCommand(2, index);
             }
         }
 
@@ -170,7 +172,7 @@ namespace ARKcc
             int index = this.listBoxCreatures.IndexFromPoint(e.Location);
             if (index != System.Windows.Forms.ListBox.NoMatches)
             {
-                this.addCommand(2, index);
+                this.addCommand(1, index);
             }
         }
         private void listBoxItems_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -178,7 +180,7 @@ namespace ARKcc
             int index = this.listBoxItems.IndexFromPoint(e.Location);
             if (index != System.Windows.Forms.ListBox.NoMatches)
             {
-                this.addCommand(3, index);
+                this.addCommand(0, index);
             }
         }
 
@@ -192,6 +194,10 @@ namespace ARKcc
             if (textBoxCommand.Text.Length > 0)
             {
                 Clipboard.SetText(textBoxCommand.Text);
+                if (this.checkBoxClearCopy.Checked)
+                {
+                    textBoxCommand.Clear();
+                }
             }
         }
 
@@ -199,10 +205,10 @@ namespace ARKcc
         {
             switch (list)
             {
-                case 1:
+                case 2:
                     return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + this.entities[index].id;
                     break;
-                case 2:
+                case 1:
                     if (this.checkBoxExact.Checked)
                     {
                         return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + "SpawnDino " + this.entities[index].bp + " " + this.numericUpDownDistance.Value.ToString() + " " + this.numericUpDownY.Value.ToString() + " " + this.numericUpDownZ.Value.ToString() + " " + this.numericUpDownLevel.Value.ToString();
@@ -212,7 +218,7 @@ namespace ARKcc
                         return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + "summon " + this.entities[index].id;
                     }
                     break;
-                case 3:
+                case 0:
                     if (this.entities[index].id.Length > 0 || this.entities[index].bp.Length > 0)
                     {
                         string quantity = (this.numericUpDownQuantity.Value > this.entities[index].maxstack ? this.entities[index].maxstack : this.numericUpDownQuantity.Value).ToString();
@@ -225,21 +231,21 @@ namespace ARKcc
 
         private void addCommand(int list, int index)
         {
-            //list: 0: recent, 1: commands, 2: creatures, 3: items
+            //list: 3: recent, 2: commands, 1: creatures, 0: items
             int eIndex = -1;
             switch (list)
             {
-                case 0:
+                case 3:
                     eIndex = recentList[index];
                     list = recentKindList[index];
                     break;
-                case 1:
+                case 2:
                     eIndex = commandList[index];
                     break;
-                case 2:
+                case 1:
                     eIndex = creatureList[index];
                     break;
-                case 3:
+                case 0:
                     eIndex = itemList[index];
                     break;
                 default:
@@ -298,33 +304,35 @@ namespace ARKcc
 
         private void treeViewCommands_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            filterList(1, this.treeViewCommands.SelectedNode.FullPath);
+            filterList(2, this.treeViewCommands.SelectedNode.FullPath);
         }
         private void treeViewCreatures_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            filterList(2, this.treeViewCreatures.SelectedNode.FullPath);
+            filterList(1, this.treeViewCreatures.SelectedNode.FullPath);
         }
 
         private void treeViewItems_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            filterList(3, this.treeViewItems.SelectedNode.FullPath);
+            filterList(0, this.treeViewItems.SelectedNode.FullPath);
         }
 
         private void filterList(int list, string cats)
         {
             ListBox pListBox = null;
             List<int> pList = null;
+            currentList = list;
+            currentCats = cats;
             switch (list)
             {
-                case 1:
+                case 2:
                     pListBox = this.listBoxCommands;
                     pList = commandList;
                     break;
-                case 2:
+                case 1:
                     pListBox = this.listBoxCreatures;
                     pList = creatureList;
                     break;
-                case 3:
+                case 0:
                     pListBox = this.listBoxItems;
                     pList = itemList;
                     break;
@@ -336,7 +344,7 @@ namespace ARKcc
                 int i = 0;
                 foreach (Entity entity in entities)
                 {
-                    if (entity.category.Length >= cats.Length && cats == entity.category.Substring(0, cats.Length))
+                    if ((this.textBoxSearch.Text.Length == 0 || entity.name.IndexOf(this.textBoxSearch.Text, StringComparison.InvariantCultureIgnoreCase) >= 0) && entity.category.Length >= cats.Length && cats == entity.category.Substring(0, cats.Length))
                     {
                         pListBox.Items.Add(entity.name);
                         pList.Add(i);
@@ -344,6 +352,10 @@ namespace ARKcc
                     i++;
                 }
             }
+        }
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            filterList(currentList, currentCats);
         }
 
         private void listBox_MouseUp(object sender, MouseEventArgs e)
@@ -360,6 +372,79 @@ namespace ARKcc
                     }
                 }
             }
+        }
+
+        private void buttonClearSearch_Click(object sender, EventArgs e)
+        {
+            this.textBoxSearch.Text = "";
+            this.textBoxSearch.Focus();
+        }
+
+        private void tabControlEntities_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TabControl tc = (TabControl)sender;
+            if (tc != null)
+            {
+                currentList = tc.SelectedIndex;
+                switch (currentList)
+                {
+                    case 0:
+                        if (this.treeViewItems.SelectedNode == null)
+                        {
+                            currentCats = "Items";
+                        }
+                        else
+                        {
+                            currentCats = this.treeViewItems.SelectedNode.FullPath;
+                        }
+                        break;
+                    case 1:
+                        if (this.treeViewCreatures.SelectedNode == null)
+                        {
+                            currentCats = "Creatures";
+                        }
+                        else
+                        {
+                            currentCats = this.treeViewCreatures.SelectedNode.FullPath;
+                        }
+                        break;
+                    case 2:
+                        if (this.treeViewCommands.SelectedNode == null)
+                        {
+                            currentCats = "Commands";
+                        }
+                        else
+                        {
+                            currentCats = this.treeViewCommands.SelectedNode.FullPath;
+                        }
+                        break;
+                }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.numericUpDownQuantity.Value = 1;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.numericUpDownQuantity.Value = 10;
+        }
+
+        private void buttonMax_Click(object sender, EventArgs e)
+        {
+            this.numericUpDownQuantity.Value = 300;
+        }
+
+        private void buttonCrap_Click(object sender, EventArgs e)
+        {
+            this.numericUpDownQuality.Value = 0;
+        }
+
+        private void buttonAs_Click(object sender, EventArgs e)
+        {
+            this.numericUpDownQuality.Value = 20;
         }
     }
 }

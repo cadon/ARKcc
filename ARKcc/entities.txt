@@ -20,6 +20,7 @@ Bug Repellant,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/Pri
 Rare Flower,250,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_RareFlower.PrimalItemResource_RareFlower'",100
 Rare Mushroom,251,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_RareMushroom.PrimalItemResource_RareMushroom'",100
 Re-Fertilizer,386,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableGeneric.PrimalItemConsumableGeneric'",100
+Wishbone,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Wishbone.PrimalItemResource_Wishbone'",200
 --Tools
 Stone Pick,33,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponStonePick.PrimalItem_WeaponStonePick'",1
 Stone Hatchet,34,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponStoneHatchet.PrimalItem_WeaponStoneHatchet'",1
@@ -384,6 +385,7 @@ Smithy,126,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/Pri
 Compost Bin,127,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_CompostBin.PrimalItemStructure_CompostBin'",100
 Cooking Pot,128,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_CookingPot.PrimalItemStructure_CookingPot'",100
 Fabricator,185,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Fabricator.PrimalItemStructure_Fabricator'",100
+Industrial Forge,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_IndustrialForge.PrimalItemStructure_IndustrialForge'"
 ---Cooking
 Industrial Grill,360,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Grill.PrimalItemStructure_Grill'",3
 ---Beds
@@ -537,6 +539,7 @@ Trike Bone Helmet Skin,385,,1
 Witch Hat Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_WitchHat.PrimalItemSkin_WitchHat'",1
 Dino Witch Hat Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Leather/PrimalItemSkin_DinoWitchHat.PrimalItemSkin_DinoWitchHat'",1
 DodoRex Mask Skin,437,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_DodorexMask.PrimalItemSkin_DodorexMask'",1
+Chieftan Hat Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_TurkeyHat.PrimalItemSkin_TurkeyHat'",1
 ---Costumes
 Carno Bone Costume,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_BoneCarno.PrimalItemCostume_BoneCarno'",1
 Raptor Bone Costume,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_BoneRaptor.PrimalItemCostume_BoneRaptor'",1
@@ -583,7 +586,8 @@ Spinosaur,Spino_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Spino/Spino_Ch
 Titanoboa,BoaFrill_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/BoaFrill/BoaFrill_Character_BP.BoaFrill_Character_BP'"
 Titanomyrma,Ant_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Ant/Ant_Character_BP.Ant_Character_BP'"
 Titanomyrma Flying,FlyingAnt_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Ant/FlyingAnt_Character_BP.FlyingAnt_Character_BP'"
-Trilobite,Trilobite_Character_C,"Blueprint'/Game/PrimalEarth/Dinos/Trilobite/Trilobite_Character.Trilobite_Character'" 
+Trilobite,Trilobite_Character_C,"Blueprint'/Game/PrimalEarth/Dinos/Trilobite/Trilobite_Character.Trilobite_Character'"
+Turkey,,"Blueprint'/Game/PrimalEarth/Dinos/Dodo/Turkey_Character_BP.Turkey_Character_BP'"
 ---Alphas
 Alpha Carno,MegaCarno_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Carno/MegaCarno_Character_BP.MegaCarno_Character_BP'"
 Alpha Raptor,MegaRaptor_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Raptor/MegaRaptor_Character_BP.MegaRaptor_Character_BP'"
@@ -619,21 +623,25 @@ Phiomia,Phiomia_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Phiomia/Phiomi
 Stegosaurus,Stego_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP'"
 Triceratops,Trike_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP'"
 --Bosses
-Broodmother Lysrix Boss,SpiderL_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Spider-Large/SpiderL_Character_BP.SpiderL_Character_BP'"
-Dragon Boss,Dragon_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dragon/Dragon_Character_BP.Dragon_Character_BP'"
-Dodo Rex Boss,DodoRex_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/DodoRex/DodoRex_Character_BP.DodoRex_Character_BP'"
+Broodmother Lysrix,SpiderL_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Spider-Large/SpiderL_Character_BP.SpiderL_Character_BP'"
+Dragon,Dragon_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dragon/Dragon_Character_BP.Dragon_Character_BP'"
+Dodo Rex,DodoRex_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/DodoRex/DodoRex_Character_BP.DodoRex_Character_BP'"
 ///////// Commands: here you can define some commands you use often
 -Commands
 // name,command
-forcetame,forcetame
 spectatorEnable,enablespectator
 spectatorDisable,DisableSpectator
-10 000 XP,addexperience 10000 0 1
 Ghost,ghost
-Godmode,god
+enable GodMode,SetGodMode 1
+disable GodMode,SetGodMode 0
+toggle Godmode,god
 InfiniteStats,InfiniteStats
 Suicide,suicide
+--Server
 saveworld,saveworld
+--Levelup
+10 000 XP,addexperience 10000 0 1
+XP to level 89,addexperience 507000 0 1
 --Resources
 Give 50 Resources,GiveResources
 GiveColors 20,GiveColors 20
@@ -645,11 +653,38 @@ Night,settimeofday 0:00
 -Commands
 playersonly,playersonly
 --Dino
+forcetame,forcetame
 DestroyWildDinos,DestroyWildDinos
 DoTame,dotame
 Kill,kill
+DestroyMyTarget,DestroyMyTarget
 set Baby Age to Adult,SetBabyAge 1
 --TimeSpeed
 SloMo (0.2),slomo 0.2
 FastMo (2),slomo 2
 VeryFastMo (5),slomo 5
+--Locations
+---Caves
+Dead Island,setplayerpos 283798 -281965 -13789
+North West Shores,setplayerpos -247496 -245689 -11318
+Grand Hills (Central),setplayerpos -23865 -67516 -74
+Soutern Islets 1,setplayerpos 49556 146296 -13500
+Soutern Islets 2,setplayerpos 28941 242131 -13280
+South Eastern Shores,setplayerpos 289506 165317 -14143
+---Underwater Caves
+Underwater Cave 06.3 / 89.7,setplayerpos 323754 -334078 -43876
+Underwater Cave 10.0 / 21.5,setplayerpos -225855 -314524 -40153
+Underwater Cave 10.4 / 39.5,setplayerpos -75946 -315973 -40449
+Underwater Cave 16.0 / 10.1,setplayerpos -311620 -271847 -35708
+Underwater Cave 36.3 / 91.5,setplayerpos 333176 -109256 -44239
+Underwater Cave 50.5 / 11.2,setplayerpos -311222 -2947 -41654
+Underwater Cave 52.7 / 91.9,setplayerpos 334176 -16500 -44239
+Underwater Cave 83.0 / 09.9,setplayerpos -316633 269605 -40130
+Underwater Cave 87.4 / 89.7,setplayerpos 325096 299832 -44327
+Underwater Cave 89.8 / 36.8,setplayerpos -109595 324600 -44155
+Underwater Cave 90.3 / 71.3,setplayerpos 171196 330467 -43771
+Underwater Cave 90.8 / 14.0,setplayerpos -295688 327270 -44394
+---Obelisks
+Red,setplayerpos -194754 -196289 34400
+Blue,setplayerpos 178731 71553 -9400
+Green,setplayerpos -260395 238666 -10500

@@ -49,8 +49,10 @@
             this.listBoxRecent = new System.Windows.Forms.ListBox();
             this.textBoxCommand = new System.Windows.Forms.TextBox();
             this.panelTopRow = new System.Windows.Forms.Panel();
+            this.buttonClearSearch = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
             this.groupBoxSettings = new System.Windows.Forms.GroupBox();
+            this.checkBoxClearCopy = new System.Windows.Forms.CheckBox();
             this.buttonCopy = new System.Windows.Forms.Button();
             this.checkBoxExact = new System.Windows.Forms.CheckBox();
             this.buttonClearCommand = new System.Windows.Forms.Button();
@@ -70,6 +72,11 @@
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.numericUpDownQuality = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.buttonMax = new System.Windows.Forms.Button();
+            this.buttonAs = new System.Windows.Forms.Button();
+            this.buttonCrap = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBottom)).BeginInit();
             this.splitContainerBottom.Panel1.SuspendLayout();
@@ -118,7 +125,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(225, 20);
             this.textBoxSearch.TabIndex = 0;
-            this.textBoxSearch.Visible = false;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -183,6 +190,7 @@
             this.tabControlEntities.SelectedIndex = 0;
             this.tabControlEntities.Size = new System.Drawing.Size(530, 512);
             this.tabControlEntities.TabIndex = 0;
+            this.tabControlEntities.SelectedIndexChanged += new System.EventHandler(this.tabControlEntities_SelectedIndexChanged);
             // 
             // tabPageItems
             // 
@@ -362,6 +370,7 @@
             // panelTopRow
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelTopRow, 2);
+            this.panelTopRow.Controls.Add(this.buttonClearSearch);
             this.panelTopRow.Controls.Add(this.labelInfo);
             this.panelTopRow.Controls.Add(this.textBoxSearch);
             this.panelTopRow.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -370,10 +379,20 @@
             this.panelTopRow.Size = new System.Drawing.Size(904, 24);
             this.panelTopRow.TabIndex = 0;
             // 
+            // buttonClearSearch
+            // 
+            this.buttonClearSearch.Location = new System.Drawing.Point(230, 3);
+            this.buttonClearSearch.Name = "buttonClearSearch";
+            this.buttonClearSearch.Size = new System.Drawing.Size(18, 21);
+            this.buttonClearSearch.TabIndex = 1;
+            this.buttonClearSearch.Text = "x";
+            this.buttonClearSearch.UseVisualStyleBackColor = true;
+            this.buttonClearSearch.Click += new System.EventHandler(this.buttonClearSearch_Click);
+            // 
             // labelInfo
             // 
             this.labelInfo.AutoSize = true;
-            this.labelInfo.Location = new System.Drawing.Point(234, 6);
+            this.labelInfo.Location = new System.Drawing.Point(249, 6);
             this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(655, 13);
             this.labelInfo.TabIndex = 0;
@@ -382,6 +401,7 @@
             // 
             // groupBoxSettings
             // 
+            this.groupBoxSettings.Controls.Add(this.checkBoxClearCopy);
             this.groupBoxSettings.Controls.Add(this.buttonCopy);
             this.groupBoxSettings.Controls.Add(this.checkBoxExact);
             this.groupBoxSettings.Controls.Add(this.buttonClearCommand);
@@ -397,6 +417,19 @@
             this.groupBoxSettings.TabIndex = 0;
             this.groupBoxSettings.TabStop = false;
             this.groupBoxSettings.Text = "Settings";
+            // 
+            // checkBoxClearCopy
+            // 
+            this.checkBoxClearCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBoxClearCopy.AutoSize = true;
+            this.checkBoxClearCopy.Checked = true;
+            this.checkBoxClearCopy.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxClearCopy.Location = new System.Drawing.Point(6, 449);
+            this.checkBoxClearCopy.Name = "checkBoxClearCopy";
+            this.checkBoxClearCopy.Size = new System.Drawing.Size(100, 17);
+            this.checkBoxClearCopy.TabIndex = 8;
+            this.checkBoxClearCopy.Text = "Clear after copy";
+            this.checkBoxClearCopy.UseVisualStyleBackColor = true;
             // 
             // buttonCopy
             // 
@@ -414,7 +447,7 @@
             this.checkBoxExact.AutoSize = true;
             this.checkBoxExact.Checked = true;
             this.checkBoxExact.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxExact.Location = new System.Drawing.Point(49, 207);
+            this.checkBoxExact.Location = new System.Drawing.Point(49, 252);
             this.checkBoxExact.Name = "checkBoxExact";
             this.checkBoxExact.Size = new System.Drawing.Size(15, 14);
             this.checkBoxExact.TabIndex = 7;
@@ -436,7 +469,7 @@
             // 
             this.groupBoxExact.Controls.Add(this.groupBoxLevel);
             this.groupBoxExact.Controls.Add(this.groupBoxPosition);
-            this.groupBoxExact.Location = new System.Drawing.Point(6, 208);
+            this.groupBoxExact.Location = new System.Drawing.Point(6, 252);
             this.groupBoxExact.Name = "groupBoxExact";
             this.groupBoxExact.Size = new System.Drawing.Size(94, 177);
             this.groupBoxExact.TabIndex = 6;
@@ -571,7 +604,7 @@
             // checkBoxAdmincheat
             // 
             this.checkBoxAdmincheat.AutoSize = true;
-            this.checkBoxAdmincheat.Location = new System.Drawing.Point(6, 185);
+            this.checkBoxAdmincheat.Location = new System.Drawing.Point(6, 229);
             this.checkBoxAdmincheat.Name = "checkBoxAdmincheat";
             this.checkBoxAdmincheat.Size = new System.Drawing.Size(82, 17);
             this.checkBoxAdmincheat.TabIndex = 4;
@@ -581,7 +614,7 @@
             // checkBoxBP
             // 
             this.checkBoxBP.AutoSize = true;
-            this.checkBoxBP.Location = new System.Drawing.Point(6, 120);
+            this.checkBoxBP.Location = new System.Drawing.Point(6, 180);
             this.checkBoxBP.Name = "checkBoxBP";
             this.checkBoxBP.Size = new System.Drawing.Size(67, 17);
             this.checkBoxBP.TabIndex = 0;
@@ -591,9 +624,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.numericUpDownQuantity);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.buttonMax);
+            this.groupBox1.Controls.Add(this.button10);
             this.groupBox1.Location = new System.Drawing.Point(6, 19);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(72, 44);
+            this.groupBox1.Size = new System.Drawing.Size(94, 75);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quantity";
@@ -622,10 +658,12 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.buttonAs);
+            this.groupBox2.Controls.Add(this.buttonCrap);
             this.groupBox2.Controls.Add(this.numericUpDownQuality);
-            this.groupBox2.Location = new System.Drawing.Point(6, 69);
+            this.groupBox2.Location = new System.Drawing.Point(6, 100);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(72, 45);
+            this.groupBox2.Size = new System.Drawing.Size(97, 74);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quality";
@@ -636,6 +674,56 @@
             this.numericUpDownQuality.Name = "numericUpDownQuality";
             this.numericUpDownQuality.Size = new System.Drawing.Size(41, 20);
             this.numericUpDownQuality.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(53, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(6, 45);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(28, 23);
+            this.button10.TabIndex = 10;
+            this.button10.Text = "10";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // buttonMax
+            // 
+            this.buttonMax.Location = new System.Drawing.Point(42, 45);
+            this.buttonMax.Name = "buttonMax";
+            this.buttonMax.Size = new System.Drawing.Size(34, 23);
+            this.buttonMax.TabIndex = 11;
+            this.buttonMax.Text = "max";
+            this.buttonMax.UseVisualStyleBackColor = true;
+            this.buttonMax.Click += new System.EventHandler(this.buttonMax_Click);
+            // 
+            // buttonAs
+            // 
+            this.buttonAs.Location = new System.Drawing.Point(47, 45);
+            this.buttonAs.Name = "buttonAs";
+            this.buttonAs.Size = new System.Drawing.Size(40, 23);
+            this.buttonAs.TabIndex = 13;
+            this.buttonAs.Text = "Asce";
+            this.buttonAs.UseVisualStyleBackColor = true;
+            this.buttonAs.Click += new System.EventHandler(this.buttonAs_Click);
+            // 
+            // buttonCrap
+            // 
+            this.buttonCrap.Location = new System.Drawing.Point(6, 45);
+            this.buttonCrap.Name = "buttonCrap";
+            this.buttonCrap.Size = new System.Drawing.Size(35, 23);
+            this.buttonCrap.TabIndex = 12;
+            this.buttonCrap.Text = "Prim";
+            this.buttonCrap.UseVisualStyleBackColor = true;
+            this.buttonCrap.Click += new System.EventHandler(this.buttonCrap_Click);
             // 
             // Form1
             // 
@@ -736,6 +824,13 @@
         private System.Windows.Forms.NumericUpDown numericUpDownQuantity;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.NumericUpDown numericUpDownQuality;
+        private System.Windows.Forms.CheckBox checkBoxClearCopy;
+        private System.Windows.Forms.Button buttonClearSearch;
+        private System.Windows.Forms.Button buttonAs;
+        private System.Windows.Forms.Button buttonCrap;
+        private System.Windows.Forms.Button buttonMax;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button1;
     }
 }
 
