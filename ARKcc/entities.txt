@@ -37,6 +37,7 @@ Spyglass,283,"Blueprint'/Game/PrimalEarth/Test/PrimalItem_WeaponSpyglass.PrimalI
 Metal Sickle,380,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSickle.PrimalItem_WeaponSickle'",1
 Spray Painter,392,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSprayPaint.PrimalItem_WeaponSprayPaint'",1
 Soap,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/BaseBPs/PrimalItemConsumableSoap.PrimalItemConsumableSoap'",1
+Magnifying Glass,,"Blueprint'/Game/PrimalEarth/Test/PrimalItem_WeaponMagnifyingGlass.PrimalItem_WeaponMagnifyingGlass'",1
 --Weapons
 ---Melee
 Pike,140,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponPike.PrimalItem_WeaponPike'",1
@@ -151,6 +152,7 @@ Trike Egg,292,"Blueprint'/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Trike.P
 Dodo Egg,294,"Blueprint'/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Dodo.PrimalItemConsumable_Egg_Dodo'",100
 Dimorph Egg,425,"Blueprint'/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Dimorph.PrimalItemConsumable_Egg_Dimorph'",100
 Pachycephalosaurus Egg,418,"Blueprint'/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Pachy.PrimalItemConsumable_Egg_Pachy'",100
+Oviraptor Egg,,"Blueprint'/Game/PrimalEarth/Test/PrimalItemConsumable_Egg_Oviraptor.PrimalItemConsumable_Egg_Oviraptor'",100
 ---Meat
 Raw Meat,12,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawMeat.PrimalItemConsumable_RawMeat'",20
 Spoiled Meat,13,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_SpoiledMeat.PrimalItemConsumable_SpoiledMeat'",100
@@ -219,7 +221,19 @@ Kibble (Pachy Egg),419,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consuma
 Kibble (Dimorph Egg),426,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_DimorphEgg.PrimalItemConsumable_Kibble_DimorphEgg'",100
 Kibble (Carbonemys Egg),344,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_TurtleEgg.PrimalItemConsumable_Kibble_TurtleEgg'",100
 Kibble (Quetzal Egg),,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_QuetzEgg.PrimalItemConsumable_Kibble_QuetzEgg'",100
+Kibble (Kairuku Egg),,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Kibble_KairukuEgg.PrimalItemConsumable_Kibble_KairukuEgg'",100
 --Dyes
+Red Coloring,58,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Red.PrimalEarthDye_Red'",100
+Green Coloring,59,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Green.PrimalEarthDye_Green'",100
+Blue Coloring,60,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Blue.PrimalEarthDye_Blue'",100
+Yellow Coloring,61,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Yellow.PrimalEarthDye_Yellow'",100
+Purple Coloring,62,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Purple.PrimalEarthDye_Purple'",100
+Orange Coloring,63,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Orange.PrimalEarthDye_Orange'",100
+Black Coloring,64,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Black.PrimalEarthDye_Black'",100
+White Coloring,65,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_White.PrimalEarthDye_White'",100
+Brown Coloring,66,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Brown.PrimalEarthDye_Brown'",100
+Cyan Coloring,67,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Cyan.PrimalEarthDye_Cyan'",100
+Purple Coloring,68,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Magenta.PrimalEarthDye_Magenta'",100
 Forest Coloring,363,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Forest.PrimalEarthDye_Forest'",100
 Parchment Coloring,364,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Parchment.PrimalEarthDye_Parchment'",100
 Pink Coloring,365,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Pink.PrimalEarthDye_Pink'",100
@@ -273,22 +287,18 @@ SCUBA Flippers,389,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/SCUBA
 SCUBA Leggings,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/SCUBA/PrimalItemArmor_ScubaPants.PrimalItemArmor_ScubaPants'",1
 ---Other
 Heavy Miner's Helmet,305,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MinersHelmet.PrimalItemArmor_MinersHelmet'",100
+---Ghilli
+Ghillie Boots,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhillieBoots.PrimalItem_GhillieBoots'",1
+Ghillie Chestpiece,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhillieShirt.PrimalItem_GhillieShirt'",1
+Ghillie Gauntlets,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhillieGloves.PrimalItem_GhillieGloves'",1
+Ghillie Leggings,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhilliePants.PrimalItem_GhilliePants'",1
+Ghillie Mask,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhillieHelmet.PrimalItem_GhillieHelmet'",1
 --Structures
 Campfire,39,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/PrimalItemStructure_Campfire.PrimalItemStructure_Campfire'",3
 Standing Torch,40,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/PrimalItemStructure_StandingTorch.PrimalItemStructure_StandingTorch'",3
 Hide Sleeping Bag,41,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/PrimalItemStructure_SleepingBag_Hide.PrimalItemStructure_SleepingBag_Hide'",3
---Dyes
-Red Coloring,58,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Red.PrimalEarthDye_Red'",100
-Green Coloring,59,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Green.PrimalEarthDye_Green'",100
-Blue Coloring,60,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Blue.PrimalEarthDye_Blue'",100
-Yellow Coloring,61,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Yellow.PrimalEarthDye_Yellow'",100
-Purple Coloring,62,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Purple.PrimalEarthDye_Purple'",100
-Orange Coloring,63,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Orange.PrimalEarthDye_Orange'",100
-Black Coloring,64,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Black.PrimalEarthDye_Black'",100
-White Coloring,65,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_White.PrimalEarthDye_White'",100
-Brown Coloring,66,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Brown.PrimalEarthDye_Brown'",100
-Cyan Coloring,67,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Cyan.PrimalEarthDye_Cyan'",100
-Purple Coloring,68,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/PrimalEarthDye_Magenta.PrimalEarthDye_Magenta'",100
+Wall Torch,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_WallTorch.PrimalItemStructure_WallTorch'",100
+Stone Fireplace,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Fireplace.PrimalItemStructure_Fireplace'",3
 --Skins
 Pistol Hat Skins,71,,1
 --Feces
@@ -342,6 +352,7 @@ Wooden Billboard,221,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structure
 Wooden Wall Sign,264,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/PrimalItemStructure_WoodSign_Wall.PrimalItemStructure_WoodSign_Wall'",100
 Wooden Spike Wall,307,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/PrimalItemStructure_WoodSpikeWall.PrimalItemStructure_WoodSpikeWall'",100
 Wooden Railing,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/PrimalItemStructure_WoodRailing.PrimalItemStructure_WoodRailing'",100
+Wooden Cage,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/PrimalItemStructure_WoodCage.PrimalItemStructure_WoodCage'",100
 ---Stone
 Stone Ceiling,315,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Stone/PrimalItemStructure_StoneCeiling.PrimalItemStructure_StoneCeiling'",100
 Stone Hatchframe,316,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Stone/PrimalItemStructure_StoneCeilingWithTrapdoor.PrimalItemStructure_StoneCeilingWithTrapdoor'",100
@@ -388,8 +399,10 @@ Fabricator,185,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc
 Industrial Forge,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_IndustrialForge.PrimalItemStructure_IndustrialForge'"
 ---Cooking
 Industrial Grill,360,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Grill.PrimalItemStructure_Grill'",3
+Industrial Cooker,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_IndustrialCookingPot.PrimalItemStructure_IndustrialCookingPot'",3
 ---Beds
 Simple Bed,129,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Bed_Simple.PrimalItemStructure_Bed_Simple'",3
+Bunk Bed,, 	"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Bed_Modern.PrimalItemStructure_Bed_Modern'",3
 ---Farming
 Medium Crop Plot,248,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_CropPlot_Medium.PrimalItemStructure_CropPlot_Medium'",100
 Large Crop Plot,249,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_CropPlot_Large.PrimalItemStructure_CropPlot_Large'",100
@@ -445,6 +458,8 @@ Ballista Turret,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Mi
 Ballista Bolt,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_BallistaArrow.PrimalItemAmmo_BallistaArrow'",50
 Minigun Turret,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TurretMinigun.PrimalItemStructure_TurretMinigun'",100
 Catapult Turret,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TurretCatapult.PrimalItemStructure_TurretCatapult'",100
+Rocket Turret,, 	"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TurretRocket.PrimalItemStructure_TurretRocket'",100
+Homing Underwater Mine,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_SeaMine.PrimalItemStructure_SeaMine'",100
 ---Decoration
 Wooden Chair,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/PrimalItemStructure_Furniture_WoodChair.PrimalItemStructure_Furniture_WoodChair'",100
 Wooden Bench,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/PrimalItemStructure_Furniture_WoodBench.PrimalItemStructure_Furniture_WoodBench'",100
@@ -454,6 +469,7 @@ War Map,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/Pri
 Pumpkin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/structures/halloween/PrimalItemStructure_Pumpkin.PrimalItemStructure_Pumpkin'",
 Scarecrow,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/structures/halloween/PrimalItemStructure_Scarecrow.PrimalItemStructure_Scarecrow'",
 Painting Canvas,421,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_PaintingCanvas.PrimalItemStructure_PaintingCanvas'",100
+Wooden Table,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/PrimalItemStructure_Furniture_WoodTable.PrimalItemStructure_Furniture_WoodTable'",100
 ---Traps
 Tripwire Narcotic Trap,325,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponPoisonTrap.PrimalItem_WeaponPoisonTrap'",10
 Tripwire Alarm Trap,326,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponAlarmTrap.PrimalItem_WeaponAlarmTrap'",10
@@ -508,7 +524,8 @@ Giganotosaurus Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/S
 Beelzebufo Saddle,427,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ToadSaddle.PrimalItemArmor_ToadSaddle'",1
 Megaloceros Saddle,428,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_StagSaddle.PrimalItemArmor_StagSaddle'",1
 Doedicurus Saddle,393,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DoedSaddle.PrimalItemArmor_DoedSaddle'",1
----Platform
+Procoptodon Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ProcoptodonSaddle.PrimalItemArmor_ProcoptodonSaddle'",1
+---Platform Saddles
 Bronto Platform Saddle,415,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_SauroSaddle_Platform.PrimalItemArmor_SauroSaddle_Platform'",1
 Plesiosaur Platform Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_PlesiSaddle_Platform.PrimalItemArmor_PlesiSaddle_Platform'",1
 Quetz Platform Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_QuetzSaddle_Platform.PrimalItemArmor_QuetzSaddle_Platform'",1
@@ -562,6 +579,21 @@ Rockwell Recipes- Energy Brew,302,"Blueprint'/Game/PrimalEarth/CoreBlueprints/It
 Rockwell Recipes- Mindwipe Tonic,420,,1
 Rockwell Recipes- Meat Jerky,304,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_Jerky.PrimalItem_RecipeNote_Jerky'",1
 Rockwell Recipes- Decorative Coloring,371,,100
+--Event-Items
+---Winter-Wonderland
+Mistletoe,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_MistleToe.PrimalItemResource_MistleToe'",200
+Coal,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Coal.PrimalItemResource_Coal'",200
+Wreath,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Wreath.PrimalItemStructure_Wreath'",100
+Holiday Tree,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_ChristmasTree.PrimalItemStructure_ChristmasTree'",100
+Holiday Lights,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_XmasLights.PrimalItemStructure_XmasLights'",100
+Snowman,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Snowman.PrimalItemStructure_Snowman'",100
+Holiday Stocking,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_Stocking.PrimalItemStructure_Stocking'",100
+Gift Box,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Christmas/PrimalItemStructure_StorageBox_ChristmasGift.PrimalItemStructure_StorageBox_ChristmasGift'",100
+Santa Hat Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_SantaHat.PrimalItemSkin_SantaHat'",1
+Dino Santa Hat Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_DinoSantaHat.PrimalItemSkin_DinoSantaHat'",1
+Candy Cane Club Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Leather/PrimalItemSkin_CandyClub.PrimalItemSkin_CandyClub'",1
+Top Hat Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_TopHat.PrimalItemSkin_TopHat'",1
+Megaloceros Reindeer Costume,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_ReindeerStag.PrimalItemCostume_ReindeerStag'",1
 --Vehicles
 Wooden Raft,414,"Blueprint'/Game/PrimalEarth/Items/Raft/PrimalItemRaft.PrimalItemRaft'",2
 Dune Buggy Vehicle Test,,"Blueprint'/Game/PrimalEarth/Vehicles/VH_Buggy/Blueprint/PrimalItemVHBuggy.PrimalItemVHBuggy'",1
@@ -576,6 +608,7 @@ Dimorphodon,Dimorph_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dimorphodo
 Direwolf,Direwolf_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP'"
 Giganotosaurus,Gigant_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Giganotosaurus/Gigant_Character_BP.Gigant_Character_BP'"
 Meganeura,Dragonfly_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP'"
+Oviraptor,OviRaptor_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/oviRaptor/oviRaptor_Character_BP.OviRaptor_Character_BP'"
 Raptor,Raptor_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP'"
 Rex,Rex_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Rex/Rex_Character_BP.Rex_Character_BP'"
 Sabertooth,Saber_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Saber/Saber_Character_BP.Saber_Character_BP'"
@@ -688,3 +721,8 @@ Underwater Cave 90.8 / 14.0,setplayerpos -295688 327270 -44394
 Red,setplayerpos -194754 -196289 34400
 Blue,setplayerpos 178731 71553 -9400
 Green,setplayerpos -260395 238666 -10500
+--ItemBundles
+AssaultR with Ammo,GiveItemNum 2 1 20 0|GiveItemNum 246 50 20 0|GiveItemNum 246 50 20 0
+Tranq-Rifle,GiveItemNum 132 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'" 50 20 0
+100 C4 + Clipper,GiveItemNum 43 50 0 0|GiveItemNum 43 50 0 0|GiveItemNum 42 1 0 0
+Flak Armor (HighQuality),GiveItemNum 225 1 20 0|GiveItemNum 223 1 20 0|GiveItemNum 226 1 20 0|GiveItemNum 224 1 20 0|GiveItemNum 222 1 20 0

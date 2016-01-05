@@ -222,7 +222,7 @@ namespace ARKcc
                     if (this.entities[index].id.Length > 0 || this.entities[index].bp.Length > 0)
                     {
                         string quantity = (this.numericUpDownQuantity.Value > this.entities[index].maxstack ? this.entities[index].maxstack : this.numericUpDownQuantity.Value).ToString();
-                        return (this.entities[index].id.Length > 0 ? "GiveItemNum " + this.entities[index].id : "GiveItem " + this.entities[index].bp) + " " + quantity + " " + this.numericUpDownQuality.Value.ToString() + (this.checkBoxBP.Checked ? " 1" : " 0");
+                        return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + (this.entities[index].id.Length > 0 ? "GiveItemNum " + this.entities[index].id : "GiveItem " + this.entities[index].bp) + " " + quantity + " " + this.numericUpDownQuality.Value.ToString() + (this.checkBoxBP.Checked ? " 1" : " 0");
                     }
                     break;
             }
@@ -445,6 +445,11 @@ namespace ARKcc
         private void buttonAs_Click(object sender, EventArgs e)
         {
             this.numericUpDownQuality.Value = 20;
+        }
+
+        private void linkLabelVer_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/cadon/ARKcc/");
         }
     }
 }

@@ -70,13 +70,14 @@
             this.checkBoxBP = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDownQuality = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.buttonMax = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonAs = new System.Windows.Forms.Button();
             this.buttonCrap = new System.Windows.Forms.Button();
+            this.numericUpDownQuality = new System.Windows.Forms.NumericUpDown();
+            this.linkLabelVer = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBottom)).BeginInit();
             this.splitContainerBottom.Panel1.SuspendLayout();
@@ -401,6 +402,7 @@
             // 
             // groupBoxSettings
             // 
+            this.groupBoxSettings.Controls.Add(this.linkLabelVer);
             this.groupBoxSettings.Controls.Add(this.checkBoxClearCopy);
             this.groupBoxSettings.Controls.Add(this.buttonCopy);
             this.groupBoxSettings.Controls.Add(this.checkBoxExact);
@@ -447,7 +449,7 @@
             this.checkBoxExact.AutoSize = true;
             this.checkBoxExact.Checked = true;
             this.checkBoxExact.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxExact.Location = new System.Drawing.Point(49, 252);
+            this.checkBoxExact.Location = new System.Drawing.Point(49, 226);
             this.checkBoxExact.Name = "checkBoxExact";
             this.checkBoxExact.Size = new System.Drawing.Size(15, 14);
             this.checkBoxExact.TabIndex = 7;
@@ -469,7 +471,7 @@
             // 
             this.groupBoxExact.Controls.Add(this.groupBoxLevel);
             this.groupBoxExact.Controls.Add(this.groupBoxPosition);
-            this.groupBoxExact.Location = new System.Drawing.Point(6, 252);
+            this.groupBoxExact.Location = new System.Drawing.Point(6, 226);
             this.groupBoxExact.Name = "groupBoxExact";
             this.groupBoxExact.Size = new System.Drawing.Size(94, 177);
             this.groupBoxExact.TabIndex = 6;
@@ -604,7 +606,7 @@
             // checkBoxAdmincheat
             // 
             this.checkBoxAdmincheat.AutoSize = true;
-            this.checkBoxAdmincheat.Location = new System.Drawing.Point(6, 229);
+            this.checkBoxAdmincheat.Location = new System.Drawing.Point(6, 203);
             this.checkBoxAdmincheat.Name = "checkBoxAdmincheat";
             this.checkBoxAdmincheat.Size = new System.Drawing.Size(82, 17);
             this.checkBoxAdmincheat.TabIndex = 4;
@@ -656,25 +658,6 @@
             0,
             0});
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.buttonAs);
-            this.groupBox2.Controls.Add(this.buttonCrap);
-            this.groupBox2.Controls.Add(this.numericUpDownQuality);
-            this.groupBox2.Location = new System.Drawing.Point(6, 100);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(97, 74);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Quality";
-            // 
-            // numericUpDownQuality
-            // 
-            this.numericUpDownQuality.Location = new System.Drawing.Point(6, 19);
-            this.numericUpDownQuality.Name = "numericUpDownQuality";
-            this.numericUpDownQuality.Size = new System.Drawing.Size(41, 20);
-            this.numericUpDownQuality.TabIndex = 0;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(53, 16);
@@ -684,6 +667,16 @@
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonMax
+            // 
+            this.buttonMax.Location = new System.Drawing.Point(42, 45);
+            this.buttonMax.Name = "buttonMax";
+            this.buttonMax.Size = new System.Drawing.Size(34, 23);
+            this.buttonMax.TabIndex = 11;
+            this.buttonMax.Text = "max";
+            this.buttonMax.UseVisualStyleBackColor = true;
+            this.buttonMax.Click += new System.EventHandler(this.buttonMax_Click);
             // 
             // button10
             // 
@@ -695,15 +688,17 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // buttonMax
+            // groupBox2
             // 
-            this.buttonMax.Location = new System.Drawing.Point(42, 45);
-            this.buttonMax.Name = "buttonMax";
-            this.buttonMax.Size = new System.Drawing.Size(34, 23);
-            this.buttonMax.TabIndex = 11;
-            this.buttonMax.Text = "max";
-            this.buttonMax.UseVisualStyleBackColor = true;
-            this.buttonMax.Click += new System.EventHandler(this.buttonMax_Click);
+            this.groupBox2.Controls.Add(this.buttonAs);
+            this.groupBox2.Controls.Add(this.buttonCrap);
+            this.groupBox2.Controls.Add(this.numericUpDownQuality);
+            this.groupBox2.Location = new System.Drawing.Point(6, 100);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(97, 74);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Quality";
             // 
             // buttonAs
             // 
@@ -724,6 +719,24 @@
             this.buttonCrap.Text = "Prim";
             this.buttonCrap.UseVisualStyleBackColor = true;
             this.buttonCrap.Click += new System.EventHandler(this.buttonCrap_Click);
+            // 
+            // numericUpDownQuality
+            // 
+            this.numericUpDownQuality.Location = new System.Drawing.Point(6, 19);
+            this.numericUpDownQuality.Name = "numericUpDownQuality";
+            this.numericUpDownQuality.Size = new System.Drawing.Size(41, 20);
+            this.numericUpDownQuality.TabIndex = 0;
+            // 
+            // linkLabelVer
+            // 
+            this.linkLabelVer.AutoSize = true;
+            this.linkLabelVer.Location = new System.Drawing.Point(6, 406);
+            this.linkLabelVer.Name = "linkLabelVer";
+            this.linkLabelVer.Size = new System.Drawing.Size(93, 13);
+            this.linkLabelVer.TabIndex = 10;
+            this.linkLabelVer.TabStop = true;
+            this.linkLabelVer.Text = "v0.8, by cad 2016";
+            this.linkLabelVer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelVer_LinkClicked);
             // 
             // Form1
             // 
@@ -831,6 +844,7 @@
         private System.Windows.Forms.Button buttonMax;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel linkLabelVer;
     }
 }
 
