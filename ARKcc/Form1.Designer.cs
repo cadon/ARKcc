@@ -52,6 +52,7 @@
             this.buttonClearSearch = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
             this.groupBoxSettings = new System.Windows.Forms.GroupBox();
+            this.linkLabelVer = new System.Windows.Forms.LinkLabel();
             this.checkBoxClearCopy = new System.Windows.Forms.CheckBox();
             this.buttonCopy = new System.Windows.Forms.Button();
             this.checkBoxExact = new System.Windows.Forms.CheckBox();
@@ -77,7 +78,6 @@
             this.buttonAs = new System.Windows.Forms.Button();
             this.buttonCrap = new System.Windows.Forms.Button();
             this.numericUpDownQuality = new System.Windows.Forms.NumericUpDown();
-            this.linkLabelVer = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBottom)).BeginInit();
             this.splitContainerBottom.Panel1.SuspendLayout();
@@ -420,6 +420,17 @@
             this.groupBoxSettings.TabStop = false;
             this.groupBoxSettings.Text = "Settings";
             // 
+            // linkLabelVer
+            // 
+            this.linkLabelVer.AutoSize = true;
+            this.linkLabelVer.Location = new System.Drawing.Point(6, 406);
+            this.linkLabelVer.Name = "linkLabelVer";
+            this.linkLabelVer.Size = new System.Drawing.Size(102, 13);
+            this.linkLabelVer.TabIndex = 10;
+            this.linkLabelVer.TabStop = true;
+            this.linkLabelVer.Text = "v0.8.2, by cad 2016";
+            this.linkLabelVer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelVer_LinkClicked);
+            // 
             // checkBoxClearCopy
             // 
             this.checkBoxClearCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -529,7 +540,7 @@
             // 
             this.numericUpDownDistance.Location = new System.Drawing.Point(27, 19);
             this.numericUpDownDistance.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -537,7 +548,7 @@
             this.numericUpDownDistance.Size = new System.Drawing.Size(45, 20);
             this.numericUpDownDistance.TabIndex = 6;
             this.numericUpDownDistance.Value = new decimal(new int[] {
-            1,
+            500,
             0,
             0,
             0});
@@ -555,7 +566,7 @@
             // 
             this.numericUpDownZ.Location = new System.Drawing.Point(27, 71);
             this.numericUpDownZ.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -581,7 +592,7 @@
             // 
             this.numericUpDownY.Location = new System.Drawing.Point(27, 45);
             this.numericUpDownY.Maximum = new decimal(new int[] {
-            1000,
+            10000,
             0,
             0,
             0});
@@ -726,17 +737,6 @@
             this.numericUpDownQuality.Name = "numericUpDownQuality";
             this.numericUpDownQuality.Size = new System.Drawing.Size(41, 20);
             this.numericUpDownQuality.TabIndex = 0;
-            // 
-            // linkLabelVer
-            // 
-            this.linkLabelVer.AutoSize = true;
-            this.linkLabelVer.Location = new System.Drawing.Point(6, 406);
-            this.linkLabelVer.Name = "linkLabelVer";
-            this.linkLabelVer.Size = new System.Drawing.Size(93, 13);
-            this.linkLabelVer.TabIndex = 10;
-            this.linkLabelVer.TabStop = true;
-            this.linkLabelVer.Text = "v0.8, by cad 2016";
-            this.linkLabelVer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelVer_LinkClicked);
             // 
             // Form1
             // 

@@ -722,7 +722,8 @@ Red,setplayerpos -194754 -196289 34400
 Blue,setplayerpos 178731 71553 -9400
 Green,setplayerpos -260395 238666 -10500
 --ItemBundles
-AssaultR with Ammo,GiveItemNum 2 1 20 0|GiveItemNum 246 50 20 0|GiveItemNum 246 50 20 0
+AssaultRifle with Ammo,GiveItemNum 2 1 20 0|GiveItemNum 246 50 20 0|GiveItemNum 246 50 20 0
+MachinedSniper + Ammo,GiveItemNum 436 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AdvancedSniperBullet.PrimalItemAmmo_AdvancedSniperBullet'" 50 20 0
 Tranq-Rifle,GiveItemNum 132 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'" 50 20 0
 100 C4 + Clipper,GiveItemNum 43 50 0 0|GiveItemNum 43 50 0 0|GiveItemNum 42 1 0 0
 Flak Armor (HighQuality),GiveItemNum 225 1 20 0|GiveItemNum 223 1 20 0|GiveItemNum 226 1 20 0|GiveItemNum 224 1 20 0|GiveItemNum 222 1 20 0
