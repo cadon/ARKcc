@@ -44,6 +44,7 @@ Pike,140,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponPi
 Spear,57,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSpear.PrimalItem_WeaponSpear'",1
 Wooden Club,434,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponStoneClub.PrimalItem_WeaponStoneClub'",1
 Metal Sword,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSword.PrimalItem_WeaponSword'",1
+Electric Prod,451,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponElectricProd.PrimalItem_WeaponElectricProd'",1
 ---Ranged
 Slingshot,139,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponSlingshot.PrimalItem_WeaponSlingshot'",1
 Simple Pistol,1,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponGun.PrimalItem_WeaponGun'",1
@@ -117,6 +118,7 @@ Gunpowder,109,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemRe
 Cementing Paste,146,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_ChitinPaste.PrimalItemResource_ChitinPaste'",100
 --Consumables
 Blood Pack,45,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_BloodPack.PrimalItemConsumable_BloodPack'",100
+Beer Jar,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_BeerJar.PrimalItemConsumable_BeerJar'",20
 ---Dishes
 Battle Tartare,254,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Soup_BattleTartare.PrimalItemConsumable_Soup_BattleTartare'",100
 Shadow Steak Saute,255,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Soup_ShadowSteak.PrimalItemConsumable_Soup_ShadowSteak'",100
@@ -285,6 +287,12 @@ SCUBA Tank,387,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/SCUBA/Pri
 SCUBA Mask,388,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/SCUBA/PrimalItemArmor_ScubaHelmet_Goggles.PrimalItemArmor_ScubaHelmet_Goggles'",1
 SCUBA Flippers,389,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/SCUBA/PrimalItemArmor_ScubaBoots_Flippers.PrimalItemArmor_ScubaBoots_Flippers'",1
 SCUBA Leggings,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/SCUBA/PrimalItemArmor_ScubaPants.PrimalItemArmor_ScubaPants'",1
+---Riot
+Riot Boots,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotBoots.PrimalItemArmor_RiotBoots'",1
+Riot Chestpiece,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotShirt.PrimalItemArmor_RiotShirt'",1
+Riot Gloves,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotGloves.PrimalItemArmor_RiotGloves'",1
+Riot Pants,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotPants.PrimalItemArmor_RiotPants'",1
+Riot Helmet,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotHelmet.PrimalItemArmor_RiotHelmet'",1
 ---Other
 Heavy Miner's Helmet,305,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MinersHelmet.PrimalItemArmor_MinersHelmet'",100
 ---Ghilli
@@ -397,6 +405,7 @@ Compost Bin,127,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Mis
 Cooking Pot,128,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_CookingPot.PrimalItemStructure_CookingPot'",100
 Fabricator,185,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Fabricator.PrimalItemStructure_Fabricator'",100
 Industrial Forge,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_IndustrialForge.PrimalItemStructure_IndustrialForge'"
+Beer Barrel,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_BeerBarrel.PrimalItemStructure_BeerBarrel'",100
 ---Cooking
 Industrial Grill,360,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Grill.PrimalItemStructure_Grill'",3
 Industrial Cooker,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_IndustrialCookingPot.PrimalItemStructure_IndustrialCookingPot'",3
@@ -435,6 +444,15 @@ Metal Dinosaur Gate,266,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Struct
 Metal Wall Sign,269,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Metal/PrimalItemStructure_MetalSign_Wall.PrimalItemStructure_MetalSign_Wall'",100
 Metal Spike Wall,296,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Metal/PrimalItemStructure_MetalSpikeWall.PrimalItemStructure_MetalSpikeWall'",100
 Metal Railing,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Metal/PrimalItemStructure_MetalRailing.PrimalItemStructure_MetalRailing'",100
+---Greenhouse
+Greenhouse Wall,438,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseWall'",100
+Greenhouse Ceiling,439,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseCeiling'",100
+Greenhouse Doorframe,440,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseWallWithDoor'",100
+Greenhouse Door,441,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseDoor'",100
+Greenhouse Wall Sloped Left,442, 	"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseWall_Sloped_Left'",100
+Greenhouse Wall Sloped Right,443,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseWall_Sloped_Right'",100
+Greenhouse Roof,444,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseRoof'",100
+Greenhouse Window,445,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Greenhouse/PrimalItemStructure_GreenhouseWindow'",100
 ---Electrical
 Remote Keypad,198,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Keypad.PrimalItemStructure_Keypad'",100
 Air Conditioner,188,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_AirConditioner.PrimalItemStructure_AirConditioner'",100
@@ -600,10 +618,12 @@ Dune Buggy Vehicle Test,,"Blueprint'/Game/PrimalEarth/Vehicles/VH_Buggy/Blueprin
 //////////////////// Creatures
 -Creatures
 // Name,Id,BP-Path
+Dung Beetle,DungBeetle_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP'"
 --Carnivores
 Carnotaurus,Carno_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP.Carno_Character_BP'"
 Coelacanth,Coel_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Coelcanth/Coel_Character_BP.Coel_Character_BP'"
 Dilophosaur,Dilo_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP'"
+Dimetrodon,Dimetro_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dimetrodon/Dimetro_Character_BP.Dimetro_Character_BP'"
 Dimorphodon,Dimorph_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP'"
 Direwolf,Direwolf_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP'"
 Giganotosaurus,Gigant_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Giganotosaurus/Gigant_Character_BP.Gigant_Character_BP'"
@@ -655,6 +675,8 @@ Parasaur,Para_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Para/Para_Charac
 Phiomia,Phiomia_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Phiomia/Phiomia_Character_BP.Phiomia_Character_BP'"
 Stegosaurus,Stego_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP'"
 Triceratops,Trike_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP'"
+Procoptodon,Procoptodon_Character_BP_C ,"Blueprint'/Game/PrimalEarth/Dinos/Procoptodon/Procoptodon_Character_BP.Procoptodon_Character_BP'"
+Gallimimus,Galli_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Gallimimus/Galli_Character_BP.Galli_Character_BP'"
 --Bosses
 Broodmother Lysrix,SpiderL_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Spider-Large/SpiderL_Character_BP.SpiderL_Character_BP'"
 Dragon,Dragon_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dragon/Dragon_Character_BP.Dragon_Character_BP'"
@@ -701,8 +723,8 @@ VeryFastMo (5),slomo 5
 Dead Island,setplayerpos 283798 -281965 -13789
 North West Shores,setplayerpos -247496 -245689 -11318
 Grand Hills (Central),setplayerpos -23865 -67516 -74
-Soutern Islets 1,setplayerpos 49556 146296 -13500
-Soutern Islets 2,setplayerpos 28941 242131 -13280
+Southern Islets N,setplayerpos 49556 146296 -13500
+Southern Islets S,setplayerpos 28500 241600 -13280
 South Eastern Shores,setplayerpos 289506 165317 -14143
 ---Underwater Caves
 Underwater Cave 06.3 / 89.7,setplayerpos 323754 -334078 -43876
@@ -718,9 +740,9 @@ Underwater Cave 89.8 / 36.8,setplayerpos -109595 324600 -44155
 Underwater Cave 90.3 / 71.3,setplayerpos 171196 330467 -43771
 Underwater Cave 90.8 / 14.0,setplayerpos -295688 327270 -44394
 ---Obelisks
-Red,setplayerpos -194754 -196289 34400
-Blue,setplayerpos 178731 71553 -9400
-Green,setplayerpos -260395 238666 -10500
+Blue,setplayerpos -194754 -196289 34400
+Green,setplayerpos 178731 71553 -9400
+Red,setplayerpos -260395 238666 -10500
 --ItemBundles
 AssaultRifle with Ammo,GiveItemNum 2 1 20 0|GiveItemNum 246 50 20 0|GiveItemNum 246 50 20 0
 MachinedSniper + Ammo,GiveItemNum 436 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AdvancedSniperBullet.PrimalItemAmmo_AdvancedSniperBullet'" 50 20 0

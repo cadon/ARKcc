@@ -353,6 +353,7 @@ namespace ARKcc
                 }
             }
         }
+
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
             filterList(currentList, currentCats);
@@ -419,6 +420,8 @@ namespace ARKcc
                         }
                         break;
                 }
+                textBoxSearch.SelectAll();
+                textBoxSearch.Select();
             }
         }
 

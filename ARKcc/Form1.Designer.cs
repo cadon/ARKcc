@@ -428,7 +428,7 @@
             this.linkLabelVer.Size = new System.Drawing.Size(102, 13);
             this.linkLabelVer.TabIndex = 10;
             this.linkLabelVer.TabStop = true;
-            this.linkLabelVer.Text = "v0.8.2, by cad 2016";
+            this.linkLabelVer.Text = "v0.8.3, by cad 2016";
             this.linkLabelVer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelVer_LinkClicked);
             // 
             // checkBoxClearCopy
