@@ -1,5 +1,7 @@
 ﻿// entity-file. Comments start with //, categories start with -
-// category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands 
+// category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands
+// the next line is the version of this file and is used for the update-check
+!2350100
 -Items
 // Name,Id,BP-Path,MaxStack
 --Basic
@@ -72,6 +74,7 @@ Rocket Propelled Grenade,247,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons
 Advanced Sniper Bullet,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AdvancedSniperBullet.PrimalItemAmmo_AdvancedSniperBullet'",50
 Tranquilizer Dart,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'",50
 Boulder,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Boulder.PrimalItemAmmo_Boulder'",50
+Grappling Hook,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_GrapplingHook.PrimalItemAmmo_GrapplingHook'",10
 ---Explosives
 Grenade,6,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponGrenade.PrimalItem_WeaponGrenade'",10
 C4 Remote Detonator,42,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponC4.PrimalItem_WeaponC4'",1
@@ -288,11 +291,11 @@ SCUBA Mask,388,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/SCUBA/Pri
 SCUBA Flippers,389,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/SCUBA/PrimalItemArmor_ScubaBoots_Flippers.PrimalItemArmor_ScubaBoots_Flippers'",1
 SCUBA Leggings,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/SCUBA/PrimalItemArmor_ScubaPants.PrimalItemArmor_ScubaPants'",1
 ---Riot
-Riot Boots,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotBoots.PrimalItemArmor_RiotBoots'",1
-Riot Chestpiece,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotShirt.PrimalItemArmor_RiotShirt'",1
-Riot Gloves,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotGloves.PrimalItemArmor_RiotGloves'",1
-Riot Pants,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotPants.PrimalItemArmor_RiotPants'",1
-Riot Helmet,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotHelmet.PrimalItemArmor_RiotHelmet'",1
+Riot Boots,449,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotBoots.PrimalItemArmor_RiotBoots'",1
+Riot Chestpiece,447,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotShirt.PrimalItemArmor_RiotShirt'",1
+Riot Gauntlets,448,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotGloves.PrimalItemArmor_RiotGloves'",1
+Riot Leggings,446,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotPants.PrimalItemArmor_RiotPants'",1
+Riot Helmet,450,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/PrimalItemArmor_RiotHelmet.PrimalItemArmor_RiotHelmet'",1
 ---Other
 Heavy Miner's Helmet,305,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MinersHelmet.PrimalItemArmor_MinersHelmet'",100
 ---Ghilli
@@ -543,6 +546,7 @@ Beelzebufo Saddle,427,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Sa
 Megaloceros Saddle,428,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_StagSaddle.PrimalItemArmor_StagSaddle'",1
 Doedicurus Saddle,393,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DoedSaddle.PrimalItemArmor_DoedSaddle'",1
 Procoptodon Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ProcoptodonSaddle.PrimalItemArmor_ProcoptodonSaddle'",1
+Terror Bird Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_TerrorBirdSaddle.PrimalItemArmor_TerrorBirdSaddle'",1
 ---Platform Saddles
 Bronto Platform Saddle,415,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_SauroSaddle_Platform.PrimalItemArmor_SauroSaddle_Platform'",1
 Plesiosaur Platform Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_PlesiSaddle_Platform.PrimalItemArmor_PlesiSaddle_Platform'",1
@@ -657,6 +661,7 @@ Bat,Bat_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.B
 Beelzebufo,Toad_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Toad/Toad_Character_BP.Toad_Character_BP'"
 Pteranodon,Ptero_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP'"
 Quetzalcoatlus,Quetz_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Quetzalcoatlus/Quetz_Character_BP.Quetz_Character_BP'"
+Terror Bird,TerrorBird_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/TerrorBird/TerrorBird_Character_BP.TerrorBird_Character_BP'"
 --Herbivores
 Ankylosaurus,Ankylo_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Ankylo/Ankylo_Character_BP.Ankylo_Character_BP'"
 Brontosaurus,Sauropod_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Sauropod/Sauropod_Character_BP.Sauropod_Character_BP'"
@@ -746,6 +751,9 @@ Red,setplayerpos -260395 238666 -10500
 --ItemBundles
 AssaultRifle with Ammo,GiveItemNum 2 1 20 0|GiveItemNum 246 50 20 0|GiveItemNum 246 50 20 0
 MachinedSniper + Ammo,GiveItemNum 436 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AdvancedSniperBullet.PrimalItemAmmo_AdvancedSniperBullet'" 50 20 0
+Rocket Launcher + Ammo,GiveItemNum 3 1 20 0|GiveItemNum 247 50 0 0
+Rocket Turret + Foundation + Ammo,GiveItemNum 172 1 0 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TurretRocket.PrimalItemStructure_TurretRocket'" 1 0 0|GiveItemNum 247 50 0 0
+Auto-Turrets +,GiveItemNum 197 10 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 189 1 0 0|GiveItemNum 164 100 0 0|GiveItemNum 194 1 0 0|GiveItemNum 190 1 0 0
 Tranq-Rifle,GiveItemNum 132 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'" 50 20 0
 100 C4 + Clipper,GiveItemNum 43 50 0 0|GiveItemNum 43 50 0 0|GiveItemNum 42 1 0 0
 Flak Armor (HighQuality),GiveItemNum 225 1 20 0|GiveItemNum 223 1 20 0|GiveItemNum 226 1 20 0|GiveItemNum 224 1 20 0|GiveItemNum 222 1 20 0

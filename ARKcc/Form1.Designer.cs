@@ -52,6 +52,7 @@
             this.buttonClearSearch = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
             this.groupBoxSettings = new System.Windows.Forms.GroupBox();
+            this.buttonCheckUpdate = new System.Windows.Forms.Button();
             this.linkLabelVer = new System.Windows.Forms.LinkLabel();
             this.checkBoxClearCopy = new System.Windows.Forms.CheckBox();
             this.buttonCopy = new System.Windows.Forms.Button();
@@ -142,7 +143,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(910, 580);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(910, 601);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // splitContainerBottom
@@ -159,8 +160,8 @@
             // splitContainerBottom.Panel2
             // 
             this.splitContainerBottom.Panel2.Controls.Add(this.textBoxCommand);
-            this.splitContainerBottom.Size = new System.Drawing.Size(784, 544);
-            this.splitContainerBottom.SplitterDistance = 512;
+            this.splitContainerBottom.Size = new System.Drawing.Size(784, 565);
+            this.splitContainerBottom.SplitterDistance = 531;
             this.splitContainerBottom.TabIndex = 7;
             // 
             // splitContainerLists
@@ -176,7 +177,7 @@
             // splitContainerLists.Panel2
             // 
             this.splitContainerLists.Panel2.Controls.Add(this.groupBoxRecent);
-            this.splitContainerLists.Size = new System.Drawing.Size(784, 512);
+            this.splitContainerLists.Size = new System.Drawing.Size(784, 531);
             this.splitContainerLists.SplitterDistance = 530;
             this.splitContainerLists.TabIndex = 3;
             // 
@@ -189,7 +190,7 @@
             this.tabControlEntities.Location = new System.Drawing.Point(0, 0);
             this.tabControlEntities.Name = "tabControlEntities";
             this.tabControlEntities.SelectedIndex = 0;
-            this.tabControlEntities.Size = new System.Drawing.Size(530, 512);
+            this.tabControlEntities.Size = new System.Drawing.Size(530, 531);
             this.tabControlEntities.TabIndex = 0;
             this.tabControlEntities.SelectedIndexChanged += new System.EventHandler(this.tabControlEntities_SelectedIndexChanged);
             // 
@@ -200,7 +201,7 @@
             this.tabPageItems.Location = new System.Drawing.Point(4, 22);
             this.tabPageItems.Name = "tabPageItems";
             this.tabPageItems.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageItems.Size = new System.Drawing.Size(522, 486);
+            this.tabPageItems.Size = new System.Drawing.Size(522, 505);
             this.tabPageItems.TabIndex = 1;
             this.tabPageItems.Text = "Items";
             this.tabPageItems.UseVisualStyleBackColor = true;
@@ -218,7 +219,7 @@
             // splitContainerItems.Panel2
             // 
             this.splitContainerItems.Panel2.Controls.Add(this.listBoxItems);
-            this.splitContainerItems.Size = new System.Drawing.Size(516, 480);
+            this.splitContainerItems.Size = new System.Drawing.Size(516, 499);
             this.splitContainerItems.SplitterDistance = 169;
             this.splitContainerItems.TabIndex = 2;
             // 
@@ -227,7 +228,7 @@
             this.treeViewItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewItems.Location = new System.Drawing.Point(0, 0);
             this.treeViewItems.Name = "treeViewItems";
-            this.treeViewItems.Size = new System.Drawing.Size(169, 480);
+            this.treeViewItems.Size = new System.Drawing.Size(169, 499);
             this.treeViewItems.TabIndex = 0;
             this.treeViewItems.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewItems_AfterSelect);
             // 
@@ -237,7 +238,7 @@
             this.listBoxItems.FormattingEnabled = true;
             this.listBoxItems.Location = new System.Drawing.Point(0, 0);
             this.listBoxItems.Name = "listBoxItems";
-            this.listBoxItems.Size = new System.Drawing.Size(343, 480);
+            this.listBoxItems.Size = new System.Drawing.Size(343, 499);
             this.listBoxItems.TabIndex = 0;
             this.listBoxItems.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxItems_MouseDoubleClick);
             this.listBoxItems.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_MouseUp);
@@ -248,7 +249,7 @@
             this.tabPageCreatures.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreatures.Name = "tabPageCreatures";
             this.tabPageCreatures.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreatures.Size = new System.Drawing.Size(522, 486);
+            this.tabPageCreatures.Size = new System.Drawing.Size(522, 505);
             this.tabPageCreatures.TabIndex = 0;
             this.tabPageCreatures.Text = "Creatures";
             this.tabPageCreatures.UseVisualStyleBackColor = true;
@@ -266,7 +267,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.listBoxCreatures);
-            this.splitContainer2.Size = new System.Drawing.Size(516, 480);
+            this.splitContainer2.Size = new System.Drawing.Size(516, 499);
             this.splitContainer2.SplitterDistance = 172;
             this.splitContainer2.TabIndex = 3;
             // 
@@ -275,7 +276,7 @@
             this.treeViewCreatures.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewCreatures.Location = new System.Drawing.Point(0, 0);
             this.treeViewCreatures.Name = "treeViewCreatures";
-            this.treeViewCreatures.Size = new System.Drawing.Size(172, 480);
+            this.treeViewCreatures.Size = new System.Drawing.Size(172, 499);
             this.treeViewCreatures.TabIndex = 1;
             this.treeViewCreatures.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCreatures_AfterSelect);
             // 
@@ -285,7 +286,7 @@
             this.listBoxCreatures.FormattingEnabled = true;
             this.listBoxCreatures.Location = new System.Drawing.Point(0, 0);
             this.listBoxCreatures.Name = "listBoxCreatures";
-            this.listBoxCreatures.Size = new System.Drawing.Size(340, 480);
+            this.listBoxCreatures.Size = new System.Drawing.Size(340, 499);
             this.listBoxCreatures.TabIndex = 0;
             this.listBoxCreatures.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxCreatures_MouseDoubleClick);
             this.listBoxCreatures.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_MouseUp);
@@ -296,7 +297,7 @@
             this.tabPageCommands.Location = new System.Drawing.Point(4, 22);
             this.tabPageCommands.Name = "tabPageCommands";
             this.tabPageCommands.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCommands.Size = new System.Drawing.Size(522, 486);
+            this.tabPageCommands.Size = new System.Drawing.Size(522, 505);
             this.tabPageCommands.TabIndex = 3;
             this.tabPageCommands.Text = "Commands";
             this.tabPageCommands.UseVisualStyleBackColor = true;
@@ -314,7 +315,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.listBoxCommands);
-            this.splitContainer3.Size = new System.Drawing.Size(516, 480);
+            this.splitContainer3.Size = new System.Drawing.Size(516, 499);
             this.splitContainer3.SplitterDistance = 172;
             this.splitContainer3.TabIndex = 3;
             // 
@@ -323,7 +324,7 @@
             this.treeViewCommands.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewCommands.Location = new System.Drawing.Point(0, 0);
             this.treeViewCommands.Name = "treeViewCommands";
-            this.treeViewCommands.Size = new System.Drawing.Size(172, 480);
+            this.treeViewCommands.Size = new System.Drawing.Size(172, 499);
             this.treeViewCommands.TabIndex = 1;
             this.treeViewCommands.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCommands_AfterSelect);
             // 
@@ -333,7 +334,7 @@
             this.listBoxCommands.FormattingEnabled = true;
             this.listBoxCommands.Location = new System.Drawing.Point(0, 0);
             this.listBoxCommands.Name = "listBoxCommands";
-            this.listBoxCommands.Size = new System.Drawing.Size(340, 480);
+            this.listBoxCommands.Size = new System.Drawing.Size(340, 499);
             this.listBoxCommands.TabIndex = 0;
             this.listBoxCommands.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxCommands_MouseDoubleClick);
             // 
@@ -343,7 +344,7 @@
             this.groupBoxRecent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxRecent.Location = new System.Drawing.Point(0, 0);
             this.groupBoxRecent.Name = "groupBoxRecent";
-            this.groupBoxRecent.Size = new System.Drawing.Size(250, 512);
+            this.groupBoxRecent.Size = new System.Drawing.Size(250, 531);
             this.groupBoxRecent.TabIndex = 0;
             this.groupBoxRecent.TabStop = false;
             this.groupBoxRecent.Text = "Recently Used";
@@ -354,7 +355,7 @@
             this.listBoxRecent.FormattingEnabled = true;
             this.listBoxRecent.Location = new System.Drawing.Point(3, 16);
             this.listBoxRecent.Name = "listBoxRecent";
-            this.listBoxRecent.Size = new System.Drawing.Size(244, 493);
+            this.listBoxRecent.Size = new System.Drawing.Size(244, 512);
             this.listBoxRecent.TabIndex = 0;
             this.listBoxRecent.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxRecent_MouseDoubleClick);
             this.listBoxRecent.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_MouseUp);
@@ -365,7 +366,7 @@
             this.textBoxCommand.Location = new System.Drawing.Point(0, 0);
             this.textBoxCommand.Multiline = true;
             this.textBoxCommand.Name = "textBoxCommand";
-            this.textBoxCommand.Size = new System.Drawing.Size(784, 28);
+            this.textBoxCommand.Size = new System.Drawing.Size(784, 30);
             this.textBoxCommand.TabIndex = 0;
             // 
             // panelTopRow
@@ -402,6 +403,7 @@
             // 
             // groupBoxSettings
             // 
+            this.groupBoxSettings.Controls.Add(this.buttonCheckUpdate);
             this.groupBoxSettings.Controls.Add(this.linkLabelVer);
             this.groupBoxSettings.Controls.Add(this.checkBoxClearCopy);
             this.groupBoxSettings.Controls.Add(this.buttonCopy);
@@ -415,20 +417,30 @@
             this.groupBoxSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxSettings.Location = new System.Drawing.Point(793, 33);
             this.groupBoxSettings.Name = "groupBoxSettings";
-            this.groupBoxSettings.Size = new System.Drawing.Size(114, 544);
+            this.groupBoxSettings.Size = new System.Drawing.Size(114, 565);
             this.groupBoxSettings.TabIndex = 0;
             this.groupBoxSettings.TabStop = false;
             this.groupBoxSettings.Text = "Settings";
+            // 
+            // buttonCheckUpdate
+            // 
+            this.buttonCheckUpdate.Location = new System.Drawing.Point(6, 422);
+            this.buttonCheckUpdate.Name = "buttonCheckUpdate";
+            this.buttonCheckUpdate.Size = new System.Drawing.Size(94, 42);
+            this.buttonCheckUpdate.TabIndex = 11;
+            this.buttonCheckUpdate.Text = "Check for List-Update";
+            this.buttonCheckUpdate.UseVisualStyleBackColor = true;
+            this.buttonCheckUpdate.Click += new System.EventHandler(this.buttonCheckUpdate_Click);
             // 
             // linkLabelVer
             // 
             this.linkLabelVer.AutoSize = true;
             this.linkLabelVer.Location = new System.Drawing.Point(6, 406);
             this.linkLabelVer.Name = "linkLabelVer";
-            this.linkLabelVer.Size = new System.Drawing.Size(102, 13);
+            this.linkLabelVer.Size = new System.Drawing.Size(93, 13);
             this.linkLabelVer.TabIndex = 10;
             this.linkLabelVer.TabStop = true;
-            this.linkLabelVer.Text = "v0.8.3, by cad 2016";
+            this.linkLabelVer.Text = "v0.9, by cad 2016";
             this.linkLabelVer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelVer_LinkClicked);
             // 
             // checkBoxClearCopy
@@ -437,7 +449,7 @@
             this.checkBoxClearCopy.AutoSize = true;
             this.checkBoxClearCopy.Checked = true;
             this.checkBoxClearCopy.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxClearCopy.Location = new System.Drawing.Point(6, 449);
+            this.checkBoxClearCopy.Location = new System.Drawing.Point(6, 470);
             this.checkBoxClearCopy.Name = "checkBoxClearCopy";
             this.checkBoxClearCopy.Size = new System.Drawing.Size(100, 17);
             this.checkBoxClearCopy.TabIndex = 8;
@@ -447,7 +459,7 @@
             // buttonCopy
             // 
             this.buttonCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCopy.Location = new System.Drawing.Point(6, 500);
+            this.buttonCopy.Location = new System.Drawing.Point(6, 521);
             this.buttonCopy.Name = "buttonCopy";
             this.buttonCopy.Size = new System.Drawing.Size(94, 37);
             this.buttonCopy.TabIndex = 0;
@@ -470,7 +482,7 @@
             // buttonClearCommand
             // 
             this.buttonClearCommand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonClearCommand.Location = new System.Drawing.Point(6, 472);
+            this.buttonClearCommand.Location = new System.Drawing.Point(6, 493);
             this.buttonClearCommand.Name = "buttonClearCommand";
             this.buttonClearCommand.Size = new System.Drawing.Size(94, 22);
             this.buttonClearCommand.TabIndex = 1;
@@ -742,7 +754,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 580);
+            this.ClientSize = new System.Drawing.Size(910, 601);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "ARKcc";
@@ -845,6 +857,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabelVer;
+        private System.Windows.Forms.Button buttonCheckUpdate;
     }
 }
 

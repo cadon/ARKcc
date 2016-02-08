@@ -22,6 +22,7 @@ namespace ARKcc
         private int maxRecently = 100;
         private int currentList = -1;
         private string currentCats = "";
+        private int localFileVer = 0; // the version of the used entities.txt (is used for update-autocheck)
 
         public Form1()
         {
@@ -29,6 +30,23 @@ namespace ARKcc
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.SetToolTip(buttonCheckUpdate, "This only checks if a new version of the file entities.txt is available, it's not a check for a new version of the application.");
+            toolTip1.SetToolTip(buttonCrap, "Primitive");
+            toolTip1.SetToolTip(buttonAs, "Ascendent");
+            loadFile();
+        }
+
+        private void clearAll()
+        {
+            entities.Clear();
+            treeViewCommands.Nodes.Clear();
+            treeViewCreatures.Nodes.Clear();
+            treeViewItems.Nodes.Clear();
+        }
+
+        private bool loadFile()
         {
             // read entities from file
             string path = "entities.txt";
@@ -38,9 +56,11 @@ namespace ARKcc
             {
                 MessageBox.Show("Entities-File 'entities.txt' not found.", "Error");
                 this.Close();
+                return false;
             }
             else
             {
+                clearAll();
                 string[] rows;
                 rows = File.ReadAllLines(path);
                 string[] parameters;
@@ -52,81 +72,91 @@ namespace ARKcc
                 {
                     if (row.Length > 1 && row.Substring(0, 2) != "//")
                     {
-                        // if new category
-                        if (row.Substring(0, 1) == "-")
+                        if (row.Substring(0, 1) == "!")
                         {
-                            int level = 1;
-                            while (row.Length > level && row.Substring(level, 1) == "-") { level++; }
-                            int currentLevel = categories.Count();
-                            if (currentLevel >= level)
+                            if (!Int32.TryParse(row.Substring(1), out localFileVer))
                             {
-                                categories.RemoveRange(level - 1, 1 + currentLevel - level);
-                            }
-                            categories.Add(row.Substring(level).Trim());
-
-                            // check if category is already in treeview, else add
-                            TreeNode node;
-                            TreeNodeCollection nodes;
-                            switch (categories[0].ToLower())
-                            {
-                                case "commands":
-                                    nodes = this.treeViewCommands.Nodes;
-                                    break;
-                                case "creatures":
-                                    nodes = this.treeViewCreatures.Nodes;
-                                    break;
-                                case "items":
-                                    nodes = this.treeViewItems.Nodes;
-                                    break;
-                                default:
-                                    nodes = null;
-                                    break;
-                            }
-                            bool nodeExists;
-                            if (nodes != null)
-                            {
-                                for (int n = 0; n < categories.Count; n++)
-                                {
-                                    node = null;
-                                    nodeExists = false;
-                                    if (nodes.Count > 0)
-                                    {
-                                        node = nodes[0];
-                                    }
-                                    while (node != null)
-                                    {
-                                        if (node.Text == categories[n])
-                                        {
-                                            if (n == categories.Count - 1)
-                                            {
-                                                nodeExists = true;
-                                                break;
-                                            }
-                                            nodes = node.Nodes;
-                                            nodeExists = true;
-                                            break;
-                                        }
-                                        node = node.NextNode;
-                                    }
-                                    if (!nodeExists)
-                                    {
-                                        // add new node alphabetically
-                                        int nn = 0;
-                                        while (nn < nodes.Count && String.Compare(nodes[nn].Text, categories[n], true) < 0) { nn++; }
-                                        nodes.Insert(nn, categories[n]);
-                                        break;
-                                    }
-                                }
+                                localFileVer = 0; // file-version unknown
                             }
                         }
                         else
                         {
-                            parameters = row.Split(',');
-                            if (parameters.Count() > 1)
+                            // if new category
+                            if (row.Substring(0, 1) == "-")
                             {
-                                int n = 1;
-                                this.entities.Add(new Entity() { name = parameters[0].Trim() + (parameters[1].Trim().Length + (parameters.Count() > 2 ? parameters[2].Trim().Length : 0) == 0 ? " (NO ID OR BP GIVEN!)" : ""), id = parameters[1].Trim(), bp = (parameters.Count() > 2 ? parameters[2].Trim() : ""), category = string.Join("\\", categories), maxstack = (parameters.Count() > 3 ? (int.TryParse(parameters[3].Trim(), out n) ? n : 1) : 1) });
-                                i++;
+                                int level = 1;
+                                while (row.Length > level && row.Substring(level, 1) == "-") { level++; }
+                                int currentLevel = categories.Count();
+                                if (currentLevel >= level)
+                                {
+                                    categories.RemoveRange(level - 1, 1 + currentLevel - level);
+                                }
+                                categories.Add(row.Substring(level).Trim());
+
+                                // check if category is already in treeview, else add
+                                TreeNode node;
+                                TreeNodeCollection nodes;
+                                switch (categories[0].ToLower())
+                                {
+                                    case "commands":
+                                        nodes = this.treeViewCommands.Nodes;
+                                        break;
+                                    case "creatures":
+                                        nodes = this.treeViewCreatures.Nodes;
+                                        break;
+                                    case "items":
+                                        nodes = this.treeViewItems.Nodes;
+                                        break;
+                                    default:
+                                        nodes = null;
+                                        break;
+                                }
+                                bool nodeExists;
+                                if (nodes != null)
+                                {
+                                    for (int n = 0; n < categories.Count; n++)
+                                    {
+                                        node = null;
+                                        nodeExists = false;
+                                        if (nodes.Count > 0)
+                                        {
+                                            node = nodes[0];
+                                        }
+                                        while (node != null)
+                                        {
+                                            if (node.Text == categories[n])
+                                            {
+                                                if (n == categories.Count - 1)
+                                                {
+                                                    nodeExists = true;
+                                                    break;
+                                                }
+                                                nodes = node.Nodes;
+                                                nodeExists = true;
+                                                break;
+                                            }
+                                            node = node.NextNode;
+                                        }
+                                        if (!nodeExists)
+                                        {
+                                            // add new node alphabetically
+                                            int nn = 0;
+                                            while (nn < nodes.Count && String.Compare(nodes[nn].Text, categories[n], true) < 0) { nn++; }
+                                            nodes.Insert(nn, categories[n]);
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                parameters = row.Split(',');
+                                if (parameters.Count() > 1)
+                                {
+                                    int n = 1;
+                                    this.entities.Add(new Entity() { name = parameters[0].Trim() + (parameters[1].Trim().Length + (parameters.Count() > 2 ? parameters[2].Trim().Length : 0) == 0 ? " (NO ID OR BP GIVEN!)" : ""), id = parameters[1].Trim(), bp = (parameters.Count() > 2 ? parameters[2].Trim() : ""), category = string.Join("\\", categories), maxstack = (parameters.Count() > 3 ? (int.TryParse(parameters[3].Trim(), out n) ? n : 1) : 1) });
+                                    i++;
+                                }
                             }
                         }
                     }
@@ -146,6 +176,7 @@ namespace ARKcc
                 filterList(2, "Commands");
                 filterList(1, "Creatures");
                 filterList(0, "Items");
+                return true;
             }
         }
 
@@ -454,5 +485,42 @@ namespace ARKcc
         {
             System.Diagnostics.Process.Start("https://github.com/cadon/ARKcc/");
         }
+
+        private void buttonCheckUpdate_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to check for a new version of the entities.txt-file?\nYour current file will be backuped.", "Update entities-file?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    string remoteUri = "https://raw.githubusercontent.com/cadon/ARKcc/master/ARKcc/";
+                    // Create a new WebClient instance.
+                    System.Net.WebClient myWebClient = new System.Net.WebClient();
+                    string remoteVerS = myWebClient.DownloadString(remoteUri + "ver.txt");
+                    int remoteFileVer = 0;
+                    if (Int32.TryParse(remoteVerS, out remoteFileVer) && localFileVer < remoteFileVer)
+                    {
+                        string fileName = "entities.txt";
+                        // backup the current version (to safe user added custom commands)
+                        File.Copy(fileName, "entities_backup_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt");
+                        // Download the Web resource and save it into the current filesystem folder.
+                        myWebClient.DownloadFile(remoteUri + fileName, fileName);
+                        // load new settings
+                        if (loadFile())
+                        {
+                            MessageBox.Show("Download and update of entries successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("You already have the newest version of the entities.txt.\n\nIf you want to add custom commands, you can easily modify the file yourself.", "No new Version", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error while trying to check or download:\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }
