@@ -685,7 +685,7 @@ Gallimimus,Galli_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Gallimimus/Ga
 --Bosses
 Broodmother Lysrix,SpiderL_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Spider-Large/SpiderL_Character_BP.SpiderL_Character_BP'"
 Dragon,Dragon_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dragon/Dragon_Character_BP.Dragon_Character_BP'"
-Dodo Rex,DodoRex_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/DodoRex/DodoRex_Character_BP.DodoRex_Character_BP'"
+DodoRex,DodoRex_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/DodoRex/DodoRex_Character_BP.DodoRex_Character_BP'"
 ///////// Commands: here you can define some commands you use often
 -Commands
 // name,command
@@ -753,7 +753,9 @@ AssaultRifle with Ammo,GiveItemNum 2 1 20 0|GiveItemNum 246 50 20 0|GiveItemNum 
 MachinedSniper + Ammo,GiveItemNum 436 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AdvancedSniperBullet.PrimalItemAmmo_AdvancedSniperBullet'" 50 20 0
 Rocket Launcher + Ammo,GiveItemNum 3 1 20 0|GiveItemNum 247 50 0 0
 Rocket Turret + Foundation + Ammo,GiveItemNum 172 1 0 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TurretRocket.PrimalItemStructure_TurretRocket'" 1 0 0|GiveItemNum 247 50 0 0
-Auto-Turrets +,GiveItemNum 197 10 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 189 1 0 0|GiveItemNum 164 100 0 0|GiveItemNum 194 1 0 0|GiveItemNum 190 1 0 0
-Tranq-Rifle,GiveItemNum 132 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'" 50 20 0
-100 C4 + Clipper,GiveItemNum 43 50 0 0|GiveItemNum 43 50 0 0|GiveItemNum 42 1 0 0
+10x Auto-Turrets + Ammo + Gen+Fuel+Cable,GiveItemNum 197 10 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 246 50 0 0|GiveItemNum 189 1 0 0|GiveItemNum 164 100 0 0|GiveItemNum 194 1 0 0|GiveItemNum 190 1 0 0
+Tranq-Rifle + Darts,GiveItemNum 132 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'" 50 20 0
+100x C4 + Clipper,GiveItemNum 43 50 0 0|GiveItemNum 43 50 0 0|GiveItemNum 42 1 0 0
 Flak Armor (HighQuality),GiveItemNum 225 1 20 0|GiveItemNum 223 1 20 0|GiveItemNum 226 1 20 0|GiveItemNum 224 1 20 0|GiveItemNum 222 1 20 0
+Riot Armor + Shield + Prod (HighQuality),GiveItemNum 449 1 20 0|GiveItemNum 447 1 20 0|GiveItemNum 448 1 20 0|GiveItemNum 450 1 20 0|GiveItemNum 446 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Shields/PrimalItemArmor_TransparentRiotShield.PrimalItemArmor_TransparentRiotShield'" 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Shields/PrimalItemArmor_TransparentRiotShield.PrimalItemArmor_TransparentRiotShield'" 1 20 0|GiveItemNum 451 1 20 0
+Pteranodon (tamed lvl 180),SpawnDino "Blueprint'/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP'" 500 1 1 120|forcetame

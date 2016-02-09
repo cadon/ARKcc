@@ -252,8 +252,15 @@ namespace ARKcc
                 case 0:
                     if (this.entities[index].id.Length > 0 || this.entities[index].bp.Length > 0)
                     {
-                        string quantity = (this.numericUpDownQuantity.Value > this.entities[index].maxstack ? this.entities[index].maxstack : this.numericUpDownQuantity.Value).ToString();
-                        return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + (this.entities[index].id.Length > 0 ? "GiveItemNum " + this.entities[index].id : "GiveItem " + this.entities[index].bp) + " " + quantity + " " + this.numericUpDownQuality.Value.ToString() + (this.checkBoxBP.Checked ? " 1" : " 0");
+                        string commandstring = "";
+                        int quantityTotal = (int)numericUpDownQuantity.Value;
+                        while (quantityTotal > 0)
+                        {
+                            int quantity = (quantityTotal > this.entities[index].maxstack ? this.entities[index].maxstack : quantityTotal);
+                            quantityTotal -= quantity;
+                            commandstring += "|" + (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + (this.entities[index].id.Length > 0 ? "GiveItemNum " + this.entities[index].id : "GiveItem " + this.entities[index].bp) + " " + quantity.ToString() + " " + this.numericUpDownQuality.Value.ToString() + (this.checkBoxBP.Checked ? " 1" : " 0");
+                        }
+                        return commandstring.Substring(1);
                     }
                     break;
             }
@@ -330,7 +337,8 @@ namespace ARKcc
 
         private void checkBoxExact_CheckedChanged(object sender, EventArgs e)
         {
-            this.groupBoxExact.Enabled = this.checkBoxExact.Checked;
+            this.groupBoxLevel.Enabled = this.checkBoxExact.Checked;
+            this.groupBoxPosition.Enabled = this.checkBoxExact.Checked;
         }
 
         private void treeViewCommands_AfterSelect(object sender, TreeViewEventArgs e)
@@ -466,9 +474,14 @@ namespace ARKcc
             this.numericUpDownQuantity.Value = 10;
         }
 
-        private void buttonMax_Click(object sender, EventArgs e)
+        private void button100_Click(object sender, EventArgs e)
         {
-            this.numericUpDownQuantity.Value = 300;
+            this.numericUpDownQuantity.Value = 100;
+        }
+
+        private void button1000_Click(object sender, EventArgs e)
+        {
+            this.numericUpDownQuantity.Value = 1000;
         }
 
         private void buttonCrap_Click(object sender, EventArgs e)
@@ -521,6 +534,5 @@ namespace ARKcc
                 }
             }
         }
-
     }
 }

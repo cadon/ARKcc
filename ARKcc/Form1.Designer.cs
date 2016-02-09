@@ -51,14 +51,13 @@
             this.panelTopRow = new System.Windows.Forms.Panel();
             this.buttonClearSearch = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
-            this.groupBoxSettings = new System.Windows.Forms.GroupBox();
+            this.groupBoxItemSettings = new System.Windows.Forms.GroupBox();
             this.buttonCheckUpdate = new System.Windows.Forms.Button();
             this.linkLabelVer = new System.Windows.Forms.LinkLabel();
             this.checkBoxClearCopy = new System.Windows.Forms.CheckBox();
             this.buttonCopy = new System.Windows.Forms.Button();
             this.checkBoxExact = new System.Windows.Forms.CheckBox();
             this.buttonClearCommand = new System.Windows.Forms.Button();
-            this.groupBoxExact = new System.Windows.Forms.GroupBox();
             this.groupBoxLevel = new System.Windows.Forms.GroupBox();
             this.numericUpDownLevel = new System.Windows.Forms.NumericUpDown();
             this.groupBoxPosition = new System.Windows.Forms.GroupBox();
@@ -71,14 +70,17 @@
             this.checkBoxAdmincheat = new System.Windows.Forms.CheckBox();
             this.checkBoxBP = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1000 = new System.Windows.Forms.Button();
             this.numericUpDownQuantity = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            this.buttonMax = new System.Windows.Forms.Button();
+            this.button100 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonAs = new System.Windows.Forms.Button();
             this.buttonCrap = new System.Windows.Forms.Button();
             this.numericUpDownQuality = new System.Windows.Forms.NumericUpDown();
+            this.groupBoxCreatureSettings = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerBottom)).BeginInit();
             this.splitContainerBottom.Panel1.SuspendLayout();
@@ -106,8 +108,7 @@
             this.splitContainer3.SuspendLayout();
             this.groupBoxRecent.SuspendLayout();
             this.panelTopRow.SuspendLayout();
-            this.groupBoxSettings.SuspendLayout();
-            this.groupBoxExact.SuspendLayout();
+            this.groupBoxItemSettings.SuspendLayout();
             this.groupBoxLevel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
             this.groupBoxPosition.SuspendLayout();
@@ -118,6 +119,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuality)).BeginInit();
+            this.groupBoxCreatureSettings.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxSearch
@@ -134,16 +137,16 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.splitContainerBottom, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelTopRow, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBoxSettings, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(910, 601);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(910, 632);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // splitContainerBottom
@@ -160,8 +163,8 @@
             // splitContainerBottom.Panel2
             // 
             this.splitContainerBottom.Panel2.Controls.Add(this.textBoxCommand);
-            this.splitContainerBottom.Size = new System.Drawing.Size(784, 565);
-            this.splitContainerBottom.SplitterDistance = 531;
+            this.splitContainerBottom.Size = new System.Drawing.Size(784, 596);
+            this.splitContainerBottom.SplitterDistance = 560;
             this.splitContainerBottom.TabIndex = 7;
             // 
             // splitContainerLists
@@ -177,7 +180,7 @@
             // splitContainerLists.Panel2
             // 
             this.splitContainerLists.Panel2.Controls.Add(this.groupBoxRecent);
-            this.splitContainerLists.Size = new System.Drawing.Size(784, 531);
+            this.splitContainerLists.Size = new System.Drawing.Size(784, 560);
             this.splitContainerLists.SplitterDistance = 530;
             this.splitContainerLists.TabIndex = 3;
             // 
@@ -190,7 +193,7 @@
             this.tabControlEntities.Location = new System.Drawing.Point(0, 0);
             this.tabControlEntities.Name = "tabControlEntities";
             this.tabControlEntities.SelectedIndex = 0;
-            this.tabControlEntities.Size = new System.Drawing.Size(530, 531);
+            this.tabControlEntities.Size = new System.Drawing.Size(530, 560);
             this.tabControlEntities.TabIndex = 0;
             this.tabControlEntities.SelectedIndexChanged += new System.EventHandler(this.tabControlEntities_SelectedIndexChanged);
             // 
@@ -201,7 +204,7 @@
             this.tabPageItems.Location = new System.Drawing.Point(4, 22);
             this.tabPageItems.Name = "tabPageItems";
             this.tabPageItems.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageItems.Size = new System.Drawing.Size(522, 505);
+            this.tabPageItems.Size = new System.Drawing.Size(522, 534);
             this.tabPageItems.TabIndex = 1;
             this.tabPageItems.Text = "Items";
             this.tabPageItems.UseVisualStyleBackColor = true;
@@ -219,7 +222,7 @@
             // splitContainerItems.Panel2
             // 
             this.splitContainerItems.Panel2.Controls.Add(this.listBoxItems);
-            this.splitContainerItems.Size = new System.Drawing.Size(516, 499);
+            this.splitContainerItems.Size = new System.Drawing.Size(516, 528);
             this.splitContainerItems.SplitterDistance = 169;
             this.splitContainerItems.TabIndex = 2;
             // 
@@ -228,7 +231,7 @@
             this.treeViewItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewItems.Location = new System.Drawing.Point(0, 0);
             this.treeViewItems.Name = "treeViewItems";
-            this.treeViewItems.Size = new System.Drawing.Size(169, 499);
+            this.treeViewItems.Size = new System.Drawing.Size(169, 528);
             this.treeViewItems.TabIndex = 0;
             this.treeViewItems.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewItems_AfterSelect);
             // 
@@ -238,7 +241,7 @@
             this.listBoxItems.FormattingEnabled = true;
             this.listBoxItems.Location = new System.Drawing.Point(0, 0);
             this.listBoxItems.Name = "listBoxItems";
-            this.listBoxItems.Size = new System.Drawing.Size(343, 499);
+            this.listBoxItems.Size = new System.Drawing.Size(343, 528);
             this.listBoxItems.TabIndex = 0;
             this.listBoxItems.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxItems_MouseDoubleClick);
             this.listBoxItems.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_MouseUp);
@@ -344,7 +347,7 @@
             this.groupBoxRecent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxRecent.Location = new System.Drawing.Point(0, 0);
             this.groupBoxRecent.Name = "groupBoxRecent";
-            this.groupBoxRecent.Size = new System.Drawing.Size(250, 531);
+            this.groupBoxRecent.Size = new System.Drawing.Size(250, 560);
             this.groupBoxRecent.TabIndex = 0;
             this.groupBoxRecent.TabStop = false;
             this.groupBoxRecent.Text = "Recently Used";
@@ -355,7 +358,7 @@
             this.listBoxRecent.FormattingEnabled = true;
             this.listBoxRecent.Location = new System.Drawing.Point(3, 16);
             this.listBoxRecent.Name = "listBoxRecent";
-            this.listBoxRecent.Size = new System.Drawing.Size(244, 512);
+            this.listBoxRecent.Size = new System.Drawing.Size(244, 541);
             this.listBoxRecent.TabIndex = 0;
             this.listBoxRecent.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxRecent_MouseDoubleClick);
             this.listBoxRecent.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_MouseUp);
@@ -366,7 +369,7 @@
             this.textBoxCommand.Location = new System.Drawing.Point(0, 0);
             this.textBoxCommand.Multiline = true;
             this.textBoxCommand.Name = "textBoxCommand";
-            this.textBoxCommand.Size = new System.Drawing.Size(784, 30);
+            this.textBoxCommand.Size = new System.Drawing.Size(784, 32);
             this.textBoxCommand.TabIndex = 0;
             // 
             // panelTopRow
@@ -401,32 +404,24 @@
             this.labelInfo.Text = "Doubleclick on entry to add to command list. Copy to clipboard, then Alt-Tab to g" +
     "ame and paste in console. Right-click to open Wiki-entry.";
             // 
-            // groupBoxSettings
+            // groupBoxItemSettings
             // 
-            this.groupBoxSettings.Controls.Add(this.buttonCheckUpdate);
-            this.groupBoxSettings.Controls.Add(this.linkLabelVer);
-            this.groupBoxSettings.Controls.Add(this.checkBoxClearCopy);
-            this.groupBoxSettings.Controls.Add(this.buttonCopy);
-            this.groupBoxSettings.Controls.Add(this.checkBoxExact);
-            this.groupBoxSettings.Controls.Add(this.buttonClearCommand);
-            this.groupBoxSettings.Controls.Add(this.groupBoxExact);
-            this.groupBoxSettings.Controls.Add(this.checkBoxAdmincheat);
-            this.groupBoxSettings.Controls.Add(this.checkBoxBP);
-            this.groupBoxSettings.Controls.Add(this.groupBox1);
-            this.groupBoxSettings.Controls.Add(this.groupBox2);
-            this.groupBoxSettings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxSettings.Location = new System.Drawing.Point(793, 33);
-            this.groupBoxSettings.Name = "groupBoxSettings";
-            this.groupBoxSettings.Size = new System.Drawing.Size(114, 565);
-            this.groupBoxSettings.TabIndex = 0;
-            this.groupBoxSettings.TabStop = false;
-            this.groupBoxSettings.Text = "Settings";
+            this.groupBoxItemSettings.Controls.Add(this.checkBoxBP);
+            this.groupBoxItemSettings.Controls.Add(this.groupBox1);
+            this.groupBoxItemSettings.Controls.Add(this.groupBox2);
+            this.groupBoxItemSettings.Location = new System.Drawing.Point(3, 3);
+            this.groupBoxItemSettings.Name = "groupBoxItemSettings";
+            this.groupBoxItemSettings.Size = new System.Drawing.Size(114, 201);
+            this.groupBoxItemSettings.TabIndex = 0;
+            this.groupBoxItemSettings.TabStop = false;
+            this.groupBoxItemSettings.Text = "Item-Settings";
             // 
             // buttonCheckUpdate
             // 
-            this.buttonCheckUpdate.Location = new System.Drawing.Point(6, 422);
+            this.buttonCheckUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCheckUpdate.Location = new System.Drawing.Point(9, 441);
             this.buttonCheckUpdate.Name = "buttonCheckUpdate";
-            this.buttonCheckUpdate.Size = new System.Drawing.Size(94, 42);
+            this.buttonCheckUpdate.Size = new System.Drawing.Size(94, 34);
             this.buttonCheckUpdate.TabIndex = 11;
             this.buttonCheckUpdate.Text = "Check for List-Update";
             this.buttonCheckUpdate.UseVisualStyleBackColor = true;
@@ -434,8 +429,9 @@
             // 
             // linkLabelVer
             // 
+            this.linkLabelVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabelVer.AutoSize = true;
-            this.linkLabelVer.Location = new System.Drawing.Point(6, 406);
+            this.linkLabelVer.Location = new System.Drawing.Point(15, 580);
             this.linkLabelVer.Name = "linkLabelVer";
             this.linkLabelVer.Size = new System.Drawing.Size(93, 13);
             this.linkLabelVer.TabIndex = 10;
@@ -445,11 +441,11 @@
             // 
             // checkBoxClearCopy
             // 
-            this.checkBoxClearCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBoxClearCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxClearCopy.AutoSize = true;
             this.checkBoxClearCopy.Checked = true;
             this.checkBoxClearCopy.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxClearCopy.Location = new System.Drawing.Point(6, 470);
+            this.checkBoxClearCopy.Location = new System.Drawing.Point(9, 481);
             this.checkBoxClearCopy.Name = "checkBoxClearCopy";
             this.checkBoxClearCopy.Size = new System.Drawing.Size(100, 17);
             this.checkBoxClearCopy.TabIndex = 8;
@@ -458,10 +454,10 @@
             // 
             // buttonCopy
             // 
-            this.buttonCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCopy.Location = new System.Drawing.Point(6, 521);
+            this.buttonCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCopy.Location = new System.Drawing.Point(9, 532);
             this.buttonCopy.Name = "buttonCopy";
-            this.buttonCopy.Size = new System.Drawing.Size(94, 37);
+            this.buttonCopy.Size = new System.Drawing.Size(94, 45);
             this.buttonCopy.TabIndex = 0;
             this.buttonCopy.Text = "Copy to Clipboard";
             this.buttonCopy.UseVisualStyleBackColor = true;
@@ -472,17 +468,18 @@
             this.checkBoxExact.AutoSize = true;
             this.checkBoxExact.Checked = true;
             this.checkBoxExact.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxExact.Location = new System.Drawing.Point(49, 226);
+            this.checkBoxExact.Location = new System.Drawing.Point(6, 19);
             this.checkBoxExact.Name = "checkBoxExact";
-            this.checkBoxExact.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxExact.Size = new System.Drawing.Size(53, 17);
             this.checkBoxExact.TabIndex = 7;
+            this.checkBoxExact.Text = "Exact";
             this.checkBoxExact.UseVisualStyleBackColor = true;
             this.checkBoxExact.CheckedChanged += new System.EventHandler(this.checkBoxExact_CheckedChanged);
             // 
             // buttonClearCommand
             // 
-            this.buttonClearCommand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonClearCommand.Location = new System.Drawing.Point(6, 493);
+            this.buttonClearCommand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonClearCommand.Location = new System.Drawing.Point(9, 504);
             this.buttonClearCommand.Name = "buttonClearCommand";
             this.buttonClearCommand.Size = new System.Drawing.Size(94, 22);
             this.buttonClearCommand.TabIndex = 1;
@@ -490,21 +487,10 @@
             this.buttonClearCommand.UseVisualStyleBackColor = true;
             this.buttonClearCommand.Click += new System.EventHandler(this.buttonClearCommand_Click);
             // 
-            // groupBoxExact
-            // 
-            this.groupBoxExact.Controls.Add(this.groupBoxLevel);
-            this.groupBoxExact.Controls.Add(this.groupBoxPosition);
-            this.groupBoxExact.Location = new System.Drawing.Point(6, 226);
-            this.groupBoxExact.Name = "groupBoxExact";
-            this.groupBoxExact.Size = new System.Drawing.Size(94, 177);
-            this.groupBoxExact.TabIndex = 6;
-            this.groupBoxExact.TabStop = false;
-            this.groupBoxExact.Text = "Exact";
-            // 
             // groupBoxLevel
             // 
             this.groupBoxLevel.Controls.Add(this.numericUpDownLevel);
-            this.groupBoxLevel.Location = new System.Drawing.Point(6, 19);
+            this.groupBoxLevel.Location = new System.Drawing.Point(6, 42);
             this.groupBoxLevel.Name = "groupBoxLevel";
             this.groupBoxLevel.Size = new System.Drawing.Size(82, 45);
             this.groupBoxLevel.TabIndex = 3;
@@ -541,7 +527,7 @@
             this.groupBoxPosition.Controls.Add(this.labelZ);
             this.groupBoxPosition.Controls.Add(this.numericUpDownY);
             this.groupBoxPosition.Controls.Add(this.labelY);
-            this.groupBoxPosition.Location = new System.Drawing.Point(6, 70);
+            this.groupBoxPosition.Location = new System.Drawing.Point(6, 93);
             this.groupBoxPosition.Name = "groupBoxPosition";
             this.groupBoxPosition.Size = new System.Drawing.Size(82, 99);
             this.groupBoxPosition.TabIndex = 5;
@@ -629,7 +615,7 @@
             // checkBoxAdmincheat
             // 
             this.checkBoxAdmincheat.AutoSize = true;
-            this.checkBoxAdmincheat.Location = new System.Drawing.Point(6, 203);
+            this.checkBoxAdmincheat.Location = new System.Drawing.Point(9, 412);
             this.checkBoxAdmincheat.Name = "checkBoxAdmincheat";
             this.checkBoxAdmincheat.Size = new System.Drawing.Size(82, 17);
             this.checkBoxAdmincheat.TabIndex = 4;
@@ -648,9 +634,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1000);
             this.groupBox1.Controls.Add(this.numericUpDownQuantity);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.buttonMax);
+            this.groupBox1.Controls.Add(this.button100);
             this.groupBox1.Controls.Add(this.button10);
             this.groupBox1.Location = new System.Drawing.Point(6, 19);
             this.groupBox1.Name = "groupBox1";
@@ -659,11 +646,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quantity";
             // 
+            // button1000
+            // 
+            this.button1000.Location = new System.Drawing.Point(66, 45);
+            this.button1000.Name = "button1000";
+            this.button1000.Size = new System.Drawing.Size(24, 23);
+            this.button1000.TabIndex = 12;
+            this.button1000.Text = "k";
+            this.button1000.UseVisualStyleBackColor = true;
+            this.button1000.Click += new System.EventHandler(this.button1000_Click);
+            // 
             // numericUpDownQuantity
             // 
             this.numericUpDownQuantity.Location = new System.Drawing.Point(6, 19);
             this.numericUpDownQuantity.Maximum = new decimal(new int[] {
-            500,
+            1000,
             0,
             0,
             0});
@@ -673,7 +670,7 @@
             0,
             0});
             this.numericUpDownQuantity.Name = "numericUpDownQuantity";
-            this.numericUpDownQuantity.Size = new System.Drawing.Size(41, 20);
+            this.numericUpDownQuantity.Size = new System.Drawing.Size(51, 20);
             this.numericUpDownQuantity.TabIndex = 0;
             this.numericUpDownQuantity.Value = new decimal(new int[] {
             1,
@@ -683,7 +680,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(53, 16);
+            this.button1.Location = new System.Drawing.Point(63, 16);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 23);
             this.button1.TabIndex = 9;
@@ -691,19 +688,19 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // buttonMax
+            // button100
             // 
-            this.buttonMax.Location = new System.Drawing.Point(42, 45);
-            this.buttonMax.Name = "buttonMax";
-            this.buttonMax.Size = new System.Drawing.Size(34, 23);
-            this.buttonMax.TabIndex = 11;
-            this.buttonMax.Text = "max";
-            this.buttonMax.UseVisualStyleBackColor = true;
-            this.buttonMax.Click += new System.EventHandler(this.buttonMax_Click);
+            this.button100.Location = new System.Drawing.Point(32, 45);
+            this.button100.Name = "button100";
+            this.button100.Size = new System.Drawing.Size(34, 23);
+            this.button100.TabIndex = 11;
+            this.button100.Text = "100";
+            this.button100.UseVisualStyleBackColor = true;
+            this.button100.Click += new System.EventHandler(this.button100_Click);
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(6, 45);
+            this.button10.Location = new System.Drawing.Point(4, 45);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(28, 23);
             this.button10.TabIndex = 10;
@@ -750,11 +747,40 @@
             this.numericUpDownQuality.Size = new System.Drawing.Size(41, 20);
             this.numericUpDownQuality.TabIndex = 0;
             // 
+            // groupBoxCreatureSettings
+            // 
+            this.groupBoxCreatureSettings.Controls.Add(this.groupBoxLevel);
+            this.groupBoxCreatureSettings.Controls.Add(this.groupBoxPosition);
+            this.groupBoxCreatureSettings.Controls.Add(this.checkBoxExact);
+            this.groupBoxCreatureSettings.Location = new System.Drawing.Point(3, 208);
+            this.groupBoxCreatureSettings.Name = "groupBoxCreatureSettings";
+            this.groupBoxCreatureSettings.Size = new System.Drawing.Size(114, 198);
+            this.groupBoxCreatureSettings.TabIndex = 12;
+            this.groupBoxCreatureSettings.TabStop = false;
+            this.groupBoxCreatureSettings.Text = "Creature-Settings";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBoxCreatureSettings);
+            this.panel1.Controls.Add(this.buttonCheckUpdate);
+            this.panel1.Controls.Add(this.groupBoxItemSettings);
+            this.panel1.Controls.Add(this.linkLabelVer);
+            this.panel1.Controls.Add(this.checkBoxAdmincheat);
+            this.panel1.Controls.Add(this.checkBoxClearCopy);
+            this.panel1.Controls.Add(this.buttonClearCommand);
+            this.panel1.Controls.Add(this.buttonCopy);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(790, 30);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(120, 602);
+            this.panel1.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 601);
+            this.ClientSize = new System.Drawing.Size(910, 632);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "ARKcc";
@@ -788,9 +814,8 @@
             this.groupBoxRecent.ResumeLayout(false);
             this.panelTopRow.ResumeLayout(false);
             this.panelTopRow.PerformLayout();
-            this.groupBoxSettings.ResumeLayout(false);
-            this.groupBoxSettings.PerformLayout();
-            this.groupBoxExact.ResumeLayout(false);
+            this.groupBoxItemSettings.ResumeLayout(false);
+            this.groupBoxItemSettings.PerformLayout();
             this.groupBoxLevel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).EndInit();
             this.groupBoxPosition.ResumeLayout(false);
@@ -802,6 +827,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuantity)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownQuality)).EndInit();
+            this.groupBoxCreatureSettings.ResumeLayout(false);
+            this.groupBoxCreatureSettings.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -829,11 +858,10 @@
         private System.Windows.Forms.ListBox listBoxRecent;
         private System.Windows.Forms.TextBox textBoxCommand;
         private System.Windows.Forms.Label labelInfo;
-        private System.Windows.Forms.GroupBox groupBoxSettings;
+        private System.Windows.Forms.GroupBox groupBoxItemSettings;
         private System.Windows.Forms.Button buttonCopy;
         private System.Windows.Forms.CheckBox checkBoxExact;
         private System.Windows.Forms.Button buttonClearCommand;
-        private System.Windows.Forms.GroupBox groupBoxExact;
         private System.Windows.Forms.GroupBox groupBoxLevel;
         private System.Windows.Forms.NumericUpDown numericUpDownLevel;
         private System.Windows.Forms.GroupBox groupBoxPosition;
@@ -853,11 +881,14 @@
         private System.Windows.Forms.Button buttonClearSearch;
         private System.Windows.Forms.Button buttonAs;
         private System.Windows.Forms.Button buttonCrap;
-        private System.Windows.Forms.Button buttonMax;
+        private System.Windows.Forms.Button button100;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabelVer;
         private System.Windows.Forms.Button buttonCheckUpdate;
+        private System.Windows.Forms.Button button1000;
+        private System.Windows.Forms.GroupBox groupBoxCreatureSettings;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
