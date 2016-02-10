@@ -1,7 +1,7 @@
 ﻿// entity-file. Comments start with //, categories start with -
 // category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands
 // the next line is the version of this file and is used for the update-check
-!2350100
+!2350101
 -Items
 // Name,Id,BP-Path,MaxStack
 --Basic
@@ -299,11 +299,11 @@ Riot Helmet,450,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Riot/Pri
 ---Other
 Heavy Miner's Helmet,305,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Metal/PrimalItemArmor_MinersHelmet.PrimalItemArmor_MinersHelmet'",100
 ---Ghilli
-Ghillie Boots,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhillieBoots.PrimalItem_GhillieBoots'",1
-Ghillie Chestpiece,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhillieShirt.PrimalItem_GhillieShirt'",1
-Ghillie Gauntlets,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhillieGloves.PrimalItem_GhillieGloves'",1
-Ghillie Leggings,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhilliePants.PrimalItem_GhilliePants'",1
-Ghillie Mask,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items//Ghillie/PrimalItem_GhillieHelmet.PrimalItem_GhillieHelmet'",1
+Ghillie Boots,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Ghillie/PrimalItemArmor_GhillieBoots.PrimalItemArmor_GhillieBoots'",1
+Ghillie Chestpiece,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Ghillie/PrimalItemArmor_GhillieShirt.PrimalItemArmor_GhillieShirt'",1
+Ghillie Gauntlets,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Ghillie/PrimalItemArmor_GhillieGloves.PrimalItemArmor_GhillieGloves'",1
+Ghillie Leggings,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Ghillie/PrimalItemArmor_GhilliePants.PrimalItemArmor_GhilliePants'",1
+Ghillie Mask,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Ghillie/PrimalItemArmor_GhillieHelmet.PrimalItemArmor_GhillieHelmet'",1
 --Structures
 Campfire,39,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/PrimalItemStructure_Campfire.PrimalItemStructure_Campfire'",3
 Standing Torch,40,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/PrimalItemStructure_StandingTorch.PrimalItemStructure_StandingTorch'",3
