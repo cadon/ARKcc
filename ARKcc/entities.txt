@@ -1,7 +1,7 @@
 ﻿// entity-file. Comments start with //, categories start with -
 // category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands
 // the next line is the version of this file and is used for the update-check
-!2350101
+!2350102
 -Items
 // Name,Id,BP-Path,MaxStack
 --Basic
@@ -689,6 +689,7 @@ DodoRex,DodoRex_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/DodoRex/DodoRe
 ///////// Commands: here you can define some commands you use often
 -Commands
 // name,command
+Show AdminManager,ShowMyAdminManager
 spectatorEnable,enablespectator
 spectatorDisable,DisableSpectator
 Ghost,ghost
@@ -702,6 +703,7 @@ saveworld,saveworld
 --Levelup
 10 000 XP,addexperience 10000 0 1
 XP to level 89,addexperience 507000 0 1
+Learn all Engrams,GiveEngrams
 --Resources
 Give 50 Resources,GiveResources
 GiveColors 20,GiveColors 20
@@ -711,7 +713,7 @@ Noon,settimeofday 12:00
 Evening,settimeofday 18:00
 Night,settimeofday 0:00
 -Commands
-playersonly,playersonly
+playersonly (freeze everything else),playersonly
 --Dino
 forcetame,forcetame
 DestroyWildDinos,DestroyWildDinos
@@ -719,6 +721,8 @@ DoTame,dotame
 Kill,kill
 DestroyMyTarget,DestroyMyTarget
 set Baby Age to Adult,SetBabyAge 1
+--Structures
+DestroyStructures (destroy all structures),DestroyStructures
 --TimeSpeed
 SloMo (0.2),slomo 0.2
 FastMo (2),slomo 2

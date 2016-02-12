@@ -253,12 +253,17 @@ namespace ARKcc
                     if (this.entities[index].id.Length > 0 || this.entities[index].bp.Length > 0)
                     {
                         string commandstring = "";
+                        string commandToPlayer = "";
+                        if (checkBoxToPlayer.Checked && textBoxToPlayer.Text.Length > 0)
+                        {
+                            commandToPlayer = "ToPlayer " + textBoxToPlayer.Text;
+                        }
                         int quantityTotal = (int)numericUpDownQuantity.Value;
                         while (quantityTotal > 0)
                         {
                             int quantity = (quantityTotal > this.entities[index].maxstack ? this.entities[index].maxstack : quantityTotal);
                             quantityTotal -= quantity;
-                            commandstring += "|" + (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + (this.entities[index].id.Length > 0 ? "GiveItemNum " + this.entities[index].id : "GiveItem " + this.entities[index].bp) + " " + quantity.ToString() + " " + this.numericUpDownQuality.Value.ToString() + (this.checkBoxBP.Checked ? " 1" : " 0");
+                            commandstring += "|" + (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + (this.entities[index].id.Length > 0 ? "GiveItemNum" + commandToPlayer + " " + this.entities[index].id : "GiveItem" + commandToPlayer + " " + this.entities[index].bp) + " " + quantity.ToString() + " " + this.numericUpDownQuality.Value.ToString() + (this.checkBoxBP.Checked ? " 1" : " 0");
                         }
                         return commandstring.Substring(1);
                     }
@@ -533,6 +538,16 @@ namespace ARKcc
                     MessageBox.Show("Error while trying to check or download:\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void checkBoxToPlayer_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxToPlayer.Enabled = checkBoxToPlayer.Checked;
+        }
+
+        private void buttonLvl120_Click(object sender, EventArgs e)
+        {
+            numericUpDownLevel.Value = 120;
         }
     }
 }
