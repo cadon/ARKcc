@@ -35,6 +35,7 @@ namespace ARKcc
             toolTip1.SetToolTip(buttonCheckUpdate, "This only checks if a new version of the file entities.txt is available, it's not a check for a new version of the application.");
             toolTip1.SetToolTip(buttonCrap, "Primitive");
             toolTip1.SetToolTip(buttonAs, "Ascendent");
+            toolTip1.SetToolTip(checkBoxForceTame, "adds the ForceTame-command after the spawn-command, so it's immediately tamed.");
             loadFile();
         }
 
@@ -242,11 +243,11 @@ namespace ARKcc
                 case 1:
                     if (this.checkBoxExact.Checked)
                     {
-                        return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + "SpawnDino " + this.entities[index].bp + " " + this.numericUpDownDistance.Value.ToString() + " " + this.numericUpDownY.Value.ToString() + " " + this.numericUpDownZ.Value.ToString() + " " + this.numericUpDownLevel.Value.ToString();
+                        return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + "SpawnDino " + this.entities[index].bp + " " + this.numericUpDownDistance.Value.ToString() + " " + this.numericUpDownY.Value.ToString() + " " + this.numericUpDownZ.Value.ToString() + " " + this.numericUpDownLevel.Value.ToString() + (checkBoxForceTame.Checked ? "|forcetame" : "");
                     }
                     else
                     {
-                        return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + "summon " + this.entities[index].id;
+                        return (this.checkBoxAdmincheat.Checked ? "Admincheat " : "") + "summon " + this.entities[index].id + (checkBoxForceTame.Checked ? "|forcetame" : "");
                     }
                     break;
                 case 0:

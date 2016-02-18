@@ -33,6 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxCreatureSettings = new System.Windows.Forms.GroupBox();
             this.groupBoxLevel = new System.Windows.Forms.GroupBox();
+            this.buttonLvl120 = new System.Windows.Forms.Button();
             this.numericUpDownLevel = new System.Windows.Forms.NumericUpDown();
             this.groupBoxPosition = new System.Windows.Forms.GroupBox();
             this.numericUpDownDistance = new System.Windows.Forms.NumericUpDown();
@@ -44,6 +45,8 @@
             this.checkBoxExact = new System.Windows.Forms.CheckBox();
             this.buttonCheckUpdate = new System.Windows.Forms.Button();
             this.groupBoxItemSettings = new System.Windows.Forms.GroupBox();
+            this.checkBoxToPlayer = new System.Windows.Forms.CheckBox();
+            this.textBoxToPlayer = new System.Windows.Forms.TextBox();
             this.checkBoxBP = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1000 = new System.Windows.Forms.Button();
@@ -81,9 +84,7 @@
             this.panelTopRow = new System.Windows.Forms.Panel();
             this.buttonClearSearch = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
-            this.textBoxToPlayer = new System.Windows.Forms.TextBox();
-            this.checkBoxToPlayer = new System.Windows.Forms.CheckBox();
-            this.buttonLvl120 = new System.Windows.Forms.Button();
+            this.checkBoxForceTame = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBoxCreatureSettings.SuspendLayout();
@@ -171,6 +172,7 @@
             // 
             // groupBoxCreatureSettings
             // 
+            this.groupBoxCreatureSettings.Controls.Add(this.checkBoxForceTame);
             this.groupBoxCreatureSettings.Controls.Add(this.groupBoxLevel);
             this.groupBoxCreatureSettings.Controls.Add(this.groupBoxPosition);
             this.groupBoxCreatureSettings.Controls.Add(this.checkBoxExact);
@@ -191,6 +193,16 @@
             this.groupBoxLevel.TabIndex = 3;
             this.groupBoxLevel.TabStop = false;
             this.groupBoxLevel.Text = "Level";
+            // 
+            // buttonLvl120
+            // 
+            this.buttonLvl120.Location = new System.Drawing.Point(58, 16);
+            this.buttonLvl120.Name = "buttonLvl120";
+            this.buttonLvl120.Size = new System.Drawing.Size(34, 23);
+            this.buttonLvl120.TabIndex = 1;
+            this.buttonLvl120.Text = "120";
+            this.buttonLvl120.UseVisualStyleBackColor = true;
+            this.buttonLvl120.Click += new System.EventHandler(this.buttonLvl120_Click);
             // 
             // numericUpDownLevel
             // 
@@ -345,6 +357,24 @@
             this.groupBoxItemSettings.TabStop = false;
             this.groupBoxItemSettings.Text = "Item-Settings";
             // 
+            // checkBoxToPlayer
+            // 
+            this.checkBoxToPlayer.AutoSize = true;
+            this.checkBoxToPlayer.Location = new System.Drawing.Point(4, 203);
+            this.checkBoxToPlayer.Name = "checkBoxToPlayer";
+            this.checkBoxToPlayer.Size = new System.Drawing.Size(88, 17);
+            this.checkBoxToPlayer.TabIndex = 14;
+            this.checkBoxToPlayer.Text = "ToPlayer (ID)";
+            this.checkBoxToPlayer.UseVisualStyleBackColor = true;
+            this.checkBoxToPlayer.CheckedChanged += new System.EventHandler(this.checkBoxToPlayer_CheckedChanged);
+            // 
+            // textBoxToPlayer
+            // 
+            this.textBoxToPlayer.Location = new System.Drawing.Point(4, 220);
+            this.textBoxToPlayer.Name = "textBoxToPlayer";
+            this.textBoxToPlayer.Size = new System.Drawing.Size(100, 20);
+            this.textBoxToPlayer.TabIndex = 13;
+            // 
             // checkBoxBP
             // 
             this.checkBoxBP.AutoSize = true;
@@ -479,7 +509,7 @@
             this.linkLabelVer.Size = new System.Drawing.Size(102, 13);
             this.linkLabelVer.TabIndex = 10;
             this.linkLabelVer.TabStop = true;
-            this.linkLabelVer.Text = "v0.9.1, by cad 2016";
+            this.linkLabelVer.Text = "v0.9.2, by cad 2016";
             this.linkLabelVer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelVer_LinkClicked);
             // 
             // checkBoxAdmincheat
@@ -630,7 +660,7 @@
             this.tabPageCreatures.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreatures.Name = "tabPageCreatures";
             this.tabPageCreatures.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreatures.Size = new System.Drawing.Size(522, 534);
+            this.tabPageCreatures.Size = new System.Drawing.Size(522, 569);
             this.tabPageCreatures.TabIndex = 0;
             this.tabPageCreatures.Text = "Creatures";
             this.tabPageCreatures.UseVisualStyleBackColor = true;
@@ -648,7 +678,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.listBoxCreatures);
-            this.splitContainer2.Size = new System.Drawing.Size(516, 528);
+            this.splitContainer2.Size = new System.Drawing.Size(516, 563);
             this.splitContainer2.SplitterDistance = 172;
             this.splitContainer2.TabIndex = 3;
             // 
@@ -657,7 +687,7 @@
             this.treeViewCreatures.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewCreatures.Location = new System.Drawing.Point(0, 0);
             this.treeViewCreatures.Name = "treeViewCreatures";
-            this.treeViewCreatures.Size = new System.Drawing.Size(172, 528);
+            this.treeViewCreatures.Size = new System.Drawing.Size(172, 563);
             this.treeViewCreatures.TabIndex = 1;
             this.treeViewCreatures.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCreatures_AfterSelect);
             // 
@@ -667,7 +697,7 @@
             this.listBoxCreatures.FormattingEnabled = true;
             this.listBoxCreatures.Location = new System.Drawing.Point(0, 0);
             this.listBoxCreatures.Name = "listBoxCreatures";
-            this.listBoxCreatures.Size = new System.Drawing.Size(340, 528);
+            this.listBoxCreatures.Size = new System.Drawing.Size(340, 563);
             this.listBoxCreatures.TabIndex = 0;
             this.listBoxCreatures.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxCreatures_MouseDoubleClick);
             this.listBoxCreatures.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBox_MouseUp);
@@ -678,7 +708,7 @@
             this.tabPageCommands.Location = new System.Drawing.Point(4, 22);
             this.tabPageCommands.Name = "tabPageCommands";
             this.tabPageCommands.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCommands.Size = new System.Drawing.Size(522, 534);
+            this.tabPageCommands.Size = new System.Drawing.Size(522, 569);
             this.tabPageCommands.TabIndex = 3;
             this.tabPageCommands.Text = "Commands";
             this.tabPageCommands.UseVisualStyleBackColor = true;
@@ -696,7 +726,7 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.listBoxCommands);
-            this.splitContainer3.Size = new System.Drawing.Size(516, 528);
+            this.splitContainer3.Size = new System.Drawing.Size(516, 563);
             this.splitContainer3.SplitterDistance = 172;
             this.splitContainer3.TabIndex = 3;
             // 
@@ -705,7 +735,7 @@
             this.treeViewCommands.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeViewCommands.Location = new System.Drawing.Point(0, 0);
             this.treeViewCommands.Name = "treeViewCommands";
-            this.treeViewCommands.Size = new System.Drawing.Size(172, 528);
+            this.treeViewCommands.Size = new System.Drawing.Size(172, 563);
             this.treeViewCommands.TabIndex = 1;
             this.treeViewCommands.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewCommands_AfterSelect);
             // 
@@ -715,7 +745,7 @@
             this.listBoxCommands.FormattingEnabled = true;
             this.listBoxCommands.Location = new System.Drawing.Point(0, 0);
             this.listBoxCommands.Name = "listBoxCommands";
-            this.listBoxCommands.Size = new System.Drawing.Size(340, 528);
+            this.listBoxCommands.Size = new System.Drawing.Size(340, 563);
             this.listBoxCommands.TabIndex = 0;
             this.listBoxCommands.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxCommands_MouseDoubleClick);
             // 
@@ -782,33 +812,17 @@
             this.labelInfo.Text = "Doubleclick on entry to add to command list. Copy to clipboard, then Alt-Tab to g" +
     "ame and paste in console. Right-click to open Wiki-entry.";
             // 
-            // textBoxToPlayer
+            // checkBoxForceTame
             // 
-            this.textBoxToPlayer.Location = new System.Drawing.Point(4, 220);
-            this.textBoxToPlayer.Name = "textBoxToPlayer";
-            this.textBoxToPlayer.Size = new System.Drawing.Size(100, 20);
-            this.textBoxToPlayer.TabIndex = 13;
-            // 
-            // checkBoxToPlayer
-            // 
-            this.checkBoxToPlayer.AutoSize = true;
-            this.checkBoxToPlayer.Location = new System.Drawing.Point(4, 203);
-            this.checkBoxToPlayer.Name = "checkBoxToPlayer";
-            this.checkBoxToPlayer.Size = new System.Drawing.Size(88, 17);
-            this.checkBoxToPlayer.TabIndex = 14;
-            this.checkBoxToPlayer.Text = "ToPlayer (ID)";
-            this.checkBoxToPlayer.UseVisualStyleBackColor = true;
-            this.checkBoxToPlayer.CheckedChanged += new System.EventHandler(this.checkBoxToPlayer_CheckedChanged);
-            // 
-            // buttonLvl120
-            // 
-            this.buttonLvl120.Location = new System.Drawing.Point(58, 16);
-            this.buttonLvl120.Name = "buttonLvl120";
-            this.buttonLvl120.Size = new System.Drawing.Size(34, 23);
-            this.buttonLvl120.TabIndex = 1;
-            this.buttonLvl120.Text = "120";
-            this.buttonLvl120.UseVisualStyleBackColor = true;
-            this.buttonLvl120.Click += new System.EventHandler(this.buttonLvl120_Click);
+            this.checkBoxForceTame.AutoSize = true;
+            this.checkBoxForceTame.Checked = true;
+            this.checkBoxForceTame.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxForceTame.Location = new System.Drawing.Point(59, 19);
+            this.checkBoxForceTame.Name = "checkBoxForceTame";
+            this.checkBoxForceTame.Size = new System.Drawing.Size(41, 17);
+            this.checkBoxForceTame.TabIndex = 8;
+            this.checkBoxForceTame.Text = "Tm";
+            this.checkBoxForceTame.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -926,6 +940,7 @@
         private System.Windows.Forms.CheckBox checkBoxToPlayer;
         private System.Windows.Forms.TextBox textBoxToPlayer;
         private System.Windows.Forms.Button buttonLvl120;
+        private System.Windows.Forms.CheckBox checkBoxForceTame;
     }
 }
 
