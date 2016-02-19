@@ -1,7 +1,7 @@
 ﻿// entity-file. Comments start with //, categories start with -
 // category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands
 // the next line is the version of this file and is used for the update-check
-!2350102
+!2350103
 -Items
 // Name,Id,BP-Path,MaxStack
 --Basic
@@ -716,11 +716,40 @@ Night,settimeofday 0:00
 playersonly (freeze everything else),playersonly
 --Dino
 forcetame,forcetame
-DestroyWildDinos,DestroyWildDinos
 DoTame,dotame
 Kill,kill
 DestroyMyTarget,DestroyMyTarget
 set Baby Age to Adult,SetBabyAge 1
+---Destroy Dinos
+Destroy All Wild Dinos,DestroyWildDinos
+----Destroy Alpha Dinos
+Destroy All Alpha Carnos,destroyall MegaCarno_Character_BP_C
+Destroy All Alpha Raptors,destroyall MegaRaptor_Character_BP_C
+Destroy All Alpha Rexes,destroyall MegaRex_Character_BP_C
+----Destroy Boss Dinos
+Destroy All Broodmother Lysrixes,destroyall SpiderL_Character_BP_C
+Destroy All Dragons,destroyall Dragon_Character_BP_C
+Destroy All Megapithecus,destroyall Gorilla_Character_BP_C
+----Destroy Holiday Dinos
+Destroy All Dodo Rexes,destroyall DodoRex_Character_BP_C
+Destroy All Skeletal Brontos,destroyall Bone_Sauropod_Character_BP_C
+Destroy All Skeletal Stegos,destroyall Bone_Stego_Character_BP_C
+Destroy All Skeletal Trikes,destroyall Bone_Trike_Character_BP_C
+Destroy All Turkeys,destroyall Turkey_Character_BP_C
+Destroy All Zombie Dodos,destroyall ZombieDodo_Character_BP_C
+----Destroy Untameable Dinos
+Destroy All Ammonites,destroyall Ammonite_Character_BP_C
+Destroy All Cnidarias,destroyall Cnidaria_Character_BP_C
+Destroy All Coelacanths,destroyall Coel_Character_BP_C
+Destroy All Meganeuras (Dragonflies),destroyall Dragonfly_Character_BP_C
+Destroy All Eurypterids,destroyall Eurypterid_Character_BP_C
+Destroy All Leeches,destroyall Leech_Character_BP_C
+Destroy All Leedsichthysea,destroyall Leedsichthys_Character_BP_C
+Destroy All Piranhas,destroyall Piranha_Character_BP_C
+Destroy All Sabertooth Salmons,destroyall Sabertooth_Salmon_Character_BP_C
+Destroy All Titanoboas (Snakes),destroyall BoaFrill_Character_BP_C
+Destroy All Titanomyrma Soldiers (Ants),destroyall Ant_Character_BP_C
+Destroy All Trilobites,destroyall Trilobite_Character_C
 --Structures
 DestroyStructures (destroy all structures),DestroyStructures
 --TimeSpeed
