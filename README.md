@@ -1,3 +1,5 @@
+Have a look at [this similar tool called ARK Commander](https://survivetheark.com/index.php?/forums/topic/788-updated-ark-commander-10143/), that has more functionality and mod-item-support.
+
 # ARKcc
 Creates console commands for the game ARK Survival Evolved.
 
