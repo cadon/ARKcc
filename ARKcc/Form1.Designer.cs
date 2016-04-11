@@ -32,6 +32,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxCreatureSettings = new System.Windows.Forms.GroupBox();
+            this.checkBoxForceTame = new System.Windows.Forms.CheckBox();
             this.groupBoxLevel = new System.Windows.Forms.GroupBox();
             this.buttonLvl120 = new System.Windows.Forms.Button();
             this.numericUpDownLevel = new System.Windows.Forms.NumericUpDown();
@@ -84,7 +85,6 @@
             this.panelTopRow = new System.Windows.Forms.Panel();
             this.buttonClearSearch = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
-            this.checkBoxForceTame = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBoxCreatureSettings.SuspendLayout();
@@ -182,6 +182,18 @@
             this.groupBoxCreatureSettings.TabIndex = 12;
             this.groupBoxCreatureSettings.TabStop = false;
             this.groupBoxCreatureSettings.Text = "Creature-Settings";
+            // 
+            // checkBoxForceTame
+            // 
+            this.checkBoxForceTame.AutoSize = true;
+            this.checkBoxForceTame.Checked = true;
+            this.checkBoxForceTame.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxForceTame.Location = new System.Drawing.Point(59, 19);
+            this.checkBoxForceTame.Name = "checkBoxForceTame";
+            this.checkBoxForceTame.Size = new System.Drawing.Size(41, 17);
+            this.checkBoxForceTame.TabIndex = 8;
+            this.checkBoxForceTame.Text = "Tm";
+            this.checkBoxForceTame.UseVisualStyleBackColor = true;
             // 
             // groupBoxLevel
             // 
@@ -509,7 +521,7 @@
             this.linkLabelVer.Size = new System.Drawing.Size(102, 13);
             this.linkLabelVer.TabIndex = 10;
             this.linkLabelVer.TabStop = true;
-            this.linkLabelVer.Text = "v0.9.2, by cad 2016";
+            this.linkLabelVer.Text = "v0.9.3, by cad 2016";
             this.linkLabelVer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelVer_LinkClicked);
             // 
             // checkBoxAdmincheat
@@ -811,18 +823,6 @@
             this.labelInfo.TabIndex = 0;
             this.labelInfo.Text = "Doubleclick on entry to add to command list. Copy to clipboard, then Alt-Tab to g" +
     "ame and paste in console. Right-click to open Wiki-entry.";
-            // 
-            // checkBoxForceTame
-            // 
-            this.checkBoxForceTame.AutoSize = true;
-            this.checkBoxForceTame.Checked = true;
-            this.checkBoxForceTame.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxForceTame.Location = new System.Drawing.Point(59, 19);
-            this.checkBoxForceTame.Name = "checkBoxForceTame";
-            this.checkBoxForceTame.Size = new System.Drawing.Size(41, 17);
-            this.checkBoxForceTame.TabIndex = 8;
-            this.checkBoxForceTame.Text = "Tm";
-            this.checkBoxForceTame.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

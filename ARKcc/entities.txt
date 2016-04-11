@@ -1,7 +1,7 @@
 ﻿// entity-file. Comments start with //, categories start with -
 // category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands
 // the next line is the version of this file and is used for the update-check
-!2350103
+!2380100
 -Items
 // Name,Id,BP-Path,MaxStack
 --Basic
@@ -112,6 +112,8 @@ Keratin,217,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemReso
 Pelt,424,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Pelt.PrimalItemResource_Pelt'",200
 Angler Gel,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_AnglerGel.PrimalItemResource_AnglerGel'",100
 Organic Polymer,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Polymer_Organic.PrimalItemResource_Polymer_Organic'",100
+Black Pearl,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_BlackPearl.PrimalItemResource_BlackPearl'",200
+Rhino Horn,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Horn.PrimalItemResource_Horn'",200
 ---Components
 Gasoline,164,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Gasoline.PrimalItemResource_Gasoline'",100
 Electronics,165,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Resources/PrimalItemResource_Electronics.PrimalItemResource_Electronics'",100
@@ -547,6 +549,7 @@ Megaloceros Saddle,428,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/S
 Doedicurus Saddle,393,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DoedSaddle.PrimalItemArmor_DoedSaddle'",1
 Procoptodon Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ProcoptodonSaddle.PrimalItemArmor_ProcoptodonSaddle'",1
 Terror Bird Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_TerrorBirdSaddle.PrimalItemArmor_TerrorBirdSaddle'",1
+Castoroides Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_BeaverSaddle.PrimalItemArmor_BeaverSaddle'",1
 ---Platform Saddles
 Bronto Platform Saddle,415,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_SauroSaddle_Platform.PrimalItemArmor_SauroSaddle_Platform'",1
 Plesiosaur Platform Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_PlesiSaddle_Platform.PrimalItemArmor_PlesiSaddle_Platform'",1
@@ -616,6 +619,11 @@ Dino Santa Hat Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Ski
 Candy Cane Club Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Leather/PrimalItemSkin_CandyClub.PrimalItemSkin_CandyClub'",1
 Top Hat Skin,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_TopHat.PrimalItemSkin_TopHat'",1
 Megaloceros Reindeer Costume,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_ReindeerStag.PrimalItemCostume_ReindeerStag'",1
+---Eggcelent Adventures
+Easter Egg,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Halloween/PrimalItemStructure_EasterEgg.PrimalItemStructure_EasterEgg'
+Dino Bunny Hat,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Leather/PrimalItemSkin_DinoBunnyHat.PrimalItemSkin_DinoBunnyHat'
+Bunny Hat,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Skin/PrimalItemSkin_BunnyHat.PrimalItemSkin_BunnyHat'
+Bunny Costume for Procop,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_ProcopBunny.PrimalItemCostume_ProcopBunny'
 --Vehicles
 Wooden Raft,414,"Blueprint'/Game/PrimalEarth/Items/Raft/PrimalItemRaft.PrimalItemRaft'",2
 Dune Buggy Vehicle Test,,"Blueprint'/Game/PrimalEarth/Vehicles/VH_Buggy/Blueprint/PrimalItemVHBuggy.PrimalItemVHBuggy'",1
@@ -655,6 +663,8 @@ Megalodon,Megalodon_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Megalodon/
 Mosasaurus,Mosa_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Mosasaurus/Mosa_Character_BP.Mosa_Character_BP'"
 Piranha,Piranha_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Piranha/Piranha_Character_BP.Piranha_Character_BP'"
 Plesiosaur,Plesiosaur_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP'"
+Eurypterid,Euryp_Character_C,"Blueprint'/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character'"
+Dunkleosteus,Dunkle_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dunkleosteus/Dunkle_Character_BP.Dunkle_Character_BP'"
 ---Flying
 Argentavis,Argent_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP'"
 Bat,Bat_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP'"
@@ -666,6 +676,7 @@ Terror Bird,TerrorBird_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/TerrorB
 Ankylosaurus,Ankylo_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Ankylo/Ankylo_Character_BP.Ankylo_Character_BP'"
 Brontosaurus,Sauropod_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Sauropod/Sauropod_Character_BP.Sauropod_Character_BP'"
 Carbonemys,Turtle_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Turtle/Turtle_Character_BP.Turtle_Character_BP'"
+Castoroides,,"Blueprint'/Game/PrimalEarth/Dinos/Beaver/Beaver_Character_BP.Beaver_Character_BP'"
 Dodo,Dodo_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP.Dodo_Character_BP'"
 Doedicurus,Doed_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Doedicurus/Doed_Character_BP.Doed_Character_BP'"
 Gigantopithecus,BigFoot_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Bigfoot/Bigfoot_Character_BP.Bigfoot_Character_BP'"
@@ -682,6 +693,10 @@ Stegosaurus,Stego_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Stego/Stego_
 Triceratops,Trike_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP'"
 Procoptodon,Procoptodon_Character_BP_C ,"Blueprint'/Game/PrimalEarth/Dinos/Procoptodon/Procoptodon_Character_BP.Procoptodon_Character_BP'"
 Gallimimus,Galli_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Gallimimus/Galli_Character_BP.Galli_Character_BP'"
+DodoBunny,,"Blueprint'/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP_Bunny.Dodo_Character_BP_Bunny'"
+Yeti,Yeti_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Bigfoot/Yeti_Character_BP.Yeti_Character_BP'"
+Dung Beetle,DungBeetle_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP'"
+Woolly Rhino,Rhino_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/WoollyRhino/Rhino_Character_BP.Rhino_Character_BP'"
 --Bosses
 Broodmother Lysrix,SpiderL_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Spider-Large/SpiderL_Character_BP.SpiderL_Character_BP'"
 Dragon,Dragon_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dragon/Dragon_Character_BP.Dragon_Character_BP'"
@@ -720,6 +735,10 @@ DoTame,dotame
 Kill,kill
 DestroyMyTarget,DestroyMyTarget
 set Baby Age to Adult,SetBabyAge 1
+---Coloring
+Set Dino-Color Region 0 to Red,SetTargetDinoColor 0 1
+Set Dino-Color Region 1 to Green,SetTargetDinoColor 1 2
+Set All Regions to White,setTargetDinoColor 0 18|setTargetDinoColor 1 18|setTargetDinoColor 2 18|setTargetDinoColor 3 18|setTargetDinoColor 4 18|setTargetDinoColor 5 18
 ---Destroy Dinos
 Destroy All Wild Dinos,DestroyWildDinos
 ----Destroy Alpha Dinos
@@ -764,6 +783,8 @@ Grand Hills (Central),setplayerpos -23865 -67516 -74
 Southern Islets N,setplayerpos 49556 146296 -13500
 Southern Islets S,setplayerpos 28500 241600 -13280
 South Eastern Shores,setplayerpos 289506 165317 -14143
+Snow Cave,setplayerpos -143930 -164269 50
+Swamp Cave,setplayerpos -102303 101617 -5179
 ---Underwater Caves
 Underwater Cave 06.3 / 89.7,setplayerpos 323754 -334078 -43876
 Underwater Cave 10.0 / 21.5,setplayerpos -225855 -314524 -40153
@@ -780,7 +801,7 @@ Underwater Cave 90.8 / 14.0,setplayerpos -295688 327270 -44394
 ---Obelisks
 Blue,setplayerpos -194754 -196289 34400
 Green,setplayerpos 178731 71553 -9400
-Red,setplayerpos -260395 238666 -10500
+Red,setplayerpos -260395 238666 -10450
 --ItemBundles
 AssaultRifle with Ammo,GiveItemNum 2 1 20 0|GiveItemNum 246 50 20 0|GiveItemNum 246 50 20 0
 MachinedSniper + Ammo,GiveItemNum 436 1 20 0|GiveItem "Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_AdvancedSniperBullet.PrimalItemAmmo_AdvancedSniperBullet'" 50 20 0
