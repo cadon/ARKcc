@@ -1,7 +1,7 @@
 ﻿// entity-file. Comments start with //, categories start with -
 // category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands
 // the next line is the version of this file and is used for the update-check
-!2380100
+!2390000
 -Items
 // Name,Id,BP-Path,MaxStack
 --Basic
@@ -75,6 +75,7 @@ Advanced Sniper Bullet,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/Prim
 Tranquilizer Dart,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_TranqDart.PrimalItemAmmo_TranqDart'",50
 Boulder,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_Boulder.PrimalItemAmmo_Boulder'",50
 Grappling Hook,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_GrapplingHook.PrimalItemAmmo_GrapplingHook'",10
+Cannonball,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_CannonBall.PrimalItemAmmo_CannonBall'",1
 ---Explosives
 Grenade,6,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponGrenade.PrimalItem_WeaponGrenade'",10
 C4 Remote Detonator,42,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponC4.PrimalItem_WeaponC4'",1
@@ -411,6 +412,7 @@ Cooking Pot,128,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Mis
 Fabricator,185,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Fabricator.PrimalItemStructure_Fabricator'",100
 Industrial Forge,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_IndustrialForge.PrimalItemStructure_IndustrialForge'"
 Beer Barrel,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_BeerBarrel.PrimalItemStructure_BeerBarrel'",100
+Chemistry Bench,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_ChemBench.PrimalItemStructure_ChemBench'",100
 ---Cooking
 Industrial Grill,360,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Grill.PrimalItemStructure_Grill'",3
 Industrial Cooker,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_IndustrialCookingPot.PrimalItemStructure_IndustrialCookingPot'",3
@@ -483,6 +485,7 @@ Minigun Turret,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Mis
 Catapult Turret,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TurretCatapult.PrimalItemStructure_TurretCatapult'",100
 Rocket Turret,, 	"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_TurretRocket.PrimalItemStructure_TurretRocket'",100
 Homing Underwater Mine,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_SeaMine.PrimalItemStructure_SeaMine'",100
+Primitive Cannon,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Misc/PrimalItemStructure_Cannon.PrimalItemStructure_Cannon'",100
 ---Decoration
 Wooden Chair,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/PrimalItemStructure_Furniture_WoodChair.PrimalItemStructure_Furniture_WoodChair'",100
 Wooden Bench,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Structures/Wooden/PrimalItemStructure_Furniture_WoodBench.PrimalItemStructure_Furniture_WoodBench'",100
@@ -550,6 +553,8 @@ Doedicurus Saddle,393,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Sa
 Procoptodon Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ProcoptodonSaddle.PrimalItemArmor_ProcoptodonSaddle'",1
 Terror Bird Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_TerrorBirdSaddle.PrimalItemArmor_TerrorBirdSaddle'",1
 Castoroides Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_BeaverSaddle.PrimalItemArmor_BeaverSaddle'",1
+Direbear Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DireBearSaddle.PrimalItemArmor_DireBearSaddle'",1
+Manta Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MantaSaddle.PrimalItemArmor_MantaSaddle'",1
 ---Platform Saddles
 Bronto Platform Saddle,415,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_SauroSaddle_Platform.PrimalItemArmor_SauroSaddle_Platform'",1
 Plesiosaur Platform Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_PlesiSaddle_Platform.PrimalItemArmor_PlesiSaddle_Platform'",1
@@ -589,6 +594,7 @@ Rex Bone Costume,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddle
 Bronto Bone Costume,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_BoneSauro.PrimalItemCostume_BoneSauro'",1
 Stego Bone Costume,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_BoneStego.PrimalItemCostume_BoneStego'",1
 Trike Bone Costume,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_BoneTrike.PrimalItemCostume_BoneTrike'",1
+Bionic Rex Costume,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemCostume_BionicRex.PrimalItemCostume_BionicRex'",1
 --Recipes
 Rockwell Recipes- Enduro Stew,256,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_EnduroStew.PrimalItem_RecipeNote_EnduroStew'",1
 Rockwell Recipes- Lazarus Chowder,257,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Notes/PrimalItem_RecipeNote_LazarusChowder.PrimalItem_RecipeNote_LazarusChowder'",1
@@ -665,6 +671,7 @@ Piranha,Piranha_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Piranha/Piranh
 Plesiosaur,Plesiosaur_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP'"
 Eurypterid,Euryp_Character_C,"Blueprint'/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character'"
 Dunkleosteus,Dunkle_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dunkleosteus/Dunkle_Character_BP.Dunkle_Character_BP'"
+Manta,Manta_Character_BP_C,"Blueprint'Game/PrimalEarth/Dinos/Manta/Manta_Character_BP.Manta_Character_BP'"
 ---Flying
 Argentavis,Argent_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP'"
 Bat,Bat_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP'"
@@ -697,6 +704,8 @@ DodoBunny,,"Blueprint'/Game/PrimalEarth/Dinos/Dodo/Dodo_Character_BP_Bunny.Dodo_
 Yeti,Yeti_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Bigfoot/Yeti_Character_BP.Yeti_Character_BP'"
 Dung Beetle,DungBeetle_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP'"
 Woolly Rhino,Rhino_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/WoollyRhino/Rhino_Character_BP.Rhino_Character_BP'"
+--Omnivores
+Direbear,Direbear_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Direbear/Direbear_Character_BP.Direbear_Character_BP'"
 --Bosses
 Broodmother Lysrix,SpiderL_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Spider-Large/SpiderL_Character_BP.SpiderL_Character_BP'"
 Dragon,Dragon_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dragon/Dragon_Character_BP.Dragon_Character_BP'"
