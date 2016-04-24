@@ -1,7 +1,7 @@
 ﻿// entity-file. Comments start with //, categories start with -
 // category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands
 // the next line is the version of this file and is used for the update-check
-!2390000
+!2390001
 -Items
 // Name,Id,BP-Path,MaxStack
 --Basic
@@ -671,7 +671,7 @@ Piranha,Piranha_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Piranha/Piranh
 Plesiosaur,Plesiosaur_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Plesiosaur/Plesiosaur_Character_BP.Plesiosaur_Character_BP'"
 Eurypterid,Euryp_Character_C,"Blueprint'/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character'"
 Dunkleosteus,Dunkle_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dunkleosteus/Dunkle_Character_BP.Dunkle_Character_BP'"
-Manta,Manta_Character_BP_C,"Blueprint'Game/PrimalEarth/Dinos/Manta/Manta_Character_BP.Manta_Character_BP'"
+Manta,Manta_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Manta/Manta_Character_BP.Manta_Character_BP'"
 ---Flying
 Argentavis,Argent_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP'"
 Bat,Bat_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP'"
