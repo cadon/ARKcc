@@ -1,7 +1,7 @@
 ﻿// entity-file. Comments start with //, categories start with -
 // category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands
 // the next line is the version of this file and is used for the update-check
-!2390001
+!2400000
 -Items
 // Name,Id,BP-Path,MaxStack
 --Basic
@@ -61,6 +61,7 @@ Crossbow,362,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_Weap
 Compound Bow,376,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponCompoundBow.PrimalItem_WeaponCompoundBow'",1
 Fabricated Pistol,244,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponMachinedPistol.PrimalItem_WeaponMachinedPistol'",1
 Fabricated Sniper Rifle,436,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponMachinedSniper.PrimalItem_WeaponMachinedSniper'",1
+Bola,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItem_WeaponBola.PrimalItem_WeaponBola'",10
 ---Ammo
 Simple Shotgun Ammo,268,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_SimpleShotgunBullet.PrimalItemAmmo_SimpleShotgunBullet'",50
 Simple Bullet,4,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Weapons/PrimalItemAmmo_SimpleBullet.PrimalItemAmmo_SimpleBullet'",50
@@ -638,6 +639,7 @@ Dune Buggy Vehicle Test,,"Blueprint'/Game/PrimalEarth/Vehicles/VH_Buggy/Blueprin
 // Name,Id,BP-Path
 Dung Beetle,DungBeetle_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/DungBeetle/DungBeetle_Character_BP.DungBeetle_Character_BP'"
 --Carnivores
+Arthropluera,Arthro_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Arthropluera/Arthro_Character_BP.Arthro_Character_BP'"
 Carnotaurus,Carno_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Carno/Carno_Character_BP.Carno_Character_BP'"
 Coelacanth,Coel_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Coelcanth/Coel_Character_BP.Coel_Character_BP'"
 Dilophosaur,Dilo_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dilo/Dilo_Character_BP.Dilo_Character_BP'"
@@ -645,6 +647,7 @@ Dimetrodon,Dimetro_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dimetrodon/
 Dimorphodon,Dimorph_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dimorphodon/Dimorph_Character_BP.Dimorph_Character_BP'"
 Direwolf,Direwolf_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Direwolf/Direwolf_Character_BP.Direwolf_Character_BP'"
 Giganotosaurus,Gigant_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Giganotosaurus/Gigant_Character_BP.Gigant_Character_BP'"
+Lystrosaurus,Lystro_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Lystrosaurus/Lystro_Character_BP.Lystro_Character_BP'"
 Meganeura,Dragonfly_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dragonfly/Dragonfly_Character_BP.Dragonfly_Character_BP'"
 Oviraptor,OviRaptor_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/oviRaptor/oviRaptor_Character_BP.OviRaptor_Character_BP'"
 Raptor,Raptor_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Raptor/Raptor_Character_BP.Raptor_Character_BP'"
@@ -672,6 +675,7 @@ Plesiosaur,Plesiosaur_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Plesiosa
 Eurypterid,Euryp_Character_C,"Blueprint'/Game/PrimalEarth/Dinos/Eurypterid/Euryp_Character.Euryp_Character'"
 Dunkleosteus,Dunkle_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Dunkleosteus/Dunkle_Character_BP.Dunkle_Character_BP'"
 Manta,Manta_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Manta/Manta_Character_BP.Manta_Character_BP'"
+Sabertooth Salmon,Salmon_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Salmon/Salmon_Character_BP.Salmon_Character_BP'"
 ---Flying
 Argentavis,Argent_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Argentavis/Argent_Character_BP.Argent_Character_BP'"
 Bat,Bat_Character_BP_C,"Blueprint'/Game/PrimalEarth/Dinos/Bat/Bat_Character_BP.Bat_Character_BP'"
