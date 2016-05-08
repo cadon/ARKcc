@@ -507,37 +507,37 @@ namespace ARKcc
 
         private void buttonCheckUpdate_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to check for a new version of the entities.txt-file?\nYour current file will be backuped.", "Update entities-file?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                try
+                string remoteUri = "https://raw.githubusercontent.com/cadon/ARKcc/master/ARKcc/";
+                // Create a new WebClient instance.
+                System.Net.WebClient myWebClient = new System.Net.WebClient();
+                string remoteVerS = myWebClient.DownloadString(remoteUri + "ver.txt");
+                int remoteFileVer = 0;
+                if (Int32.TryParse(remoteVerS, out remoteFileVer) && localFileVer < remoteFileVer)
                 {
-                    string remoteUri = "https://raw.githubusercontent.com/cadon/ARKcc/master/ARKcc/";
-                    // Create a new WebClient instance.
-                    System.Net.WebClient myWebClient = new System.Net.WebClient();
-                    string remoteVerS = myWebClient.DownloadString(remoteUri + "ver.txt");
-                    int remoteFileVer = 0;
-                    if (Int32.TryParse(remoteVerS, out remoteFileVer) && localFileVer < remoteFileVer)
+                    string fileName = "entities.txt";
+                    if (MessageBox.Show("New version available. Do you want to backup your current file? This is only recommened if you changed it manually.", "Backup entities-file?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        string fileName = "entities.txt";
                         // backup the current version (to safe user added custom commands)
                         File.Copy(fileName, "entities_backup_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".txt");
-                        // Download the Web resource and save it into the current filesystem folder.
-                        myWebClient.DownloadFile(remoteUri + fileName, fileName);
-                        // load new settings
-                        if (loadFile())
-                        {
-                            MessageBox.Show("Download and update of entries successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
                     }
-                    else
+                    // Download the Web resource and save it into the current filesystem folder.
+                    myWebClient.DownloadFile(remoteUri + fileName, fileName);
+                    // load new settings
+                    if (loadFile())
                     {
-                        MessageBox.Show("You already have the newest version of the entities.txt.\n\nIf you want to add custom commands, you can easily modify the file yourself.", "No new Version", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Download and update of entries successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error while trying to check or download:\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("You already have the newest version of the entities.txt.\n\nIf you want to add custom commands, you can easily modify the file entities.txt yourself.", "No new Version", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while trying to check or download:\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

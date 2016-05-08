@@ -1,7 +1,7 @@
 ﻿// entity-file. Comments start with //, categories start with -
 // category-rows start with hyphens, according to the level of category. Toplevel-categories are fixed as Items, Creatures and Commands
 // the next line is the version of this file and is used for the update-check
-!2400000
+!2400001
 -Items
 // Name,Id,BP-Path,MaxStack
 --Basic
@@ -170,6 +170,10 @@ Raw Prime Meat,252,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables
 Cooked Prime Meat,253,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_CookedPrimeMeat.PrimalItemConsumable_CookedPrimeMeat'",30
 Cooked Meat Jerky,297,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_CookedMeat_Jerky.PrimalItemConsumable_CookedMeat_Jerky'",30
 Prime Meat Jerky,298,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_CookedPrimeMeat_Jerky.PrimalItemConsumable_CookedPrimeMeat_Jerky'",30
+Raw Fish Meat,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawMeat_Fish.PrimalItemConsumable_RawMeat_Fish'",20
+Cooked Fish Meat,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_CookedMeat_Fish.PrimalItemConsumable_CookedMeat_Fish'",30
+Raw Prime Fish Meat,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_RawPrimeMeat_Fish.PrimalItemConsumable_RawPrimeMeat_Fish'",1
+Cooked Prime Fish Meat,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_CookedPrimeMeat_Fish.PrimalItemConsumable_CookedPrimeMeat_Fish'",30
 ---Crafted
 Narcotic,123,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Narcotic.PrimalItemConsumable_Narcotic'",100
 Stimulant,124,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Consumables/PrimalItemConsumable_Stimulant.PrimalItemConsumable_Stimulant'",100
@@ -556,6 +560,7 @@ Terror Bird Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Sadd
 Castoroides Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_BeaverSaddle.PrimalItemArmor_BeaverSaddle'",1
 Direbear Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_DireBearSaddle.PrimalItemArmor_DireBearSaddle'",1
 Manta Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_MantaSaddle.PrimalItemArmor_MantaSaddle'",1
+Arthropluera Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_ArthroSaddle.PrimalItemArmor_ArthroSaddle'",1
 ---Platform Saddles
 Bronto Platform Saddle,415,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_SauroSaddle_Platform.PrimalItemArmor_SauroSaddle_Platform'",1
 Plesiosaur Platform Saddle,,"Blueprint'/Game/PrimalEarth/CoreBlueprints/Items/Armor/Saddles/PrimalItemArmor_PlesiSaddle_Platform.PrimalItemArmor_PlesiSaddle_Platform'",1
